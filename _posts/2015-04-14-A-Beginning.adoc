@@ -5,7 +5,7 @@ I've set aside this small blog space to be a working lesson plan of sorts.  As w
 
 === A few Thoughts on Your Environment
 
-While it is completely possible to develop from a windows machine, I would highly suggest working with OSX (freeBSD), or a linux distribution. http://www.ubuntu.com/[Ubuntu] is probably the easiest to get going with. While this may seem like more work upfront to work with an unfamiliar operating system, it will wind up saving much time in the long run.  Most webservers run on a flavor of linux (redhat or centos usually) and will become immensly useful to familiarize yourself with linux basics early on.
+While it is completely possible to develop from a windows machine, I would highly suggest working with osX (freeBSD), or a linux distribution. http://www.ubuntu.com/[Ubuntu] is probably the easiest to get going with. While this may seem like more work upfront to work with an unfamiliar operating system, it will wind up saving much time in the long run.  Most webservers run on a flavor of linux (redhat or centos usually) and will become immensly useful to familiarize yourself with linux basics early on.
 
 Reguardless of your choice of OS you will need a good text editor.  https://www.sublimetext.com/[Sublime text] is a great choice to begin with.  It goes out of it's way to help out the developer, with auto completion, syntax highlighting, auto closure, and basic document structure checks.  If you are on windows some folks seem to really like http://notepad-plus-plus.org/[notepad++].
 
