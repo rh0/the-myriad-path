@@ -9,4 +9,4 @@ While it is completely possible to develop from a windows machine, I would highl
 
 Reguardless of your choice of OS you will need a good text editor.  https://www.sublimetext.com/[Sublime text] is a great choice to begin with.  It goes out of it's way to help out the developer, with auto completion, syntax highlighting, auto closure, and basic document structure checks.  If you are on windows some folks seem to really like http://notepad-plus-plus.org/[notepad++].
 
-It would be a good idea to go ahead and https://github.com/[create a github account], and to install git on your machiene.  We will be using this pretty much from the beginning, and is indespensible knowledge for any developer. _Don't worry if you don't understand it right now, we'll go over that._
+It would be a good idea to go ahead and https://github.com/[create a github account], and to https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[install git on your machiene].  We will be using this pretty much from the beginning, and is indespensible knowledge for any developer. _Don't worry if you don't understand it right now, we'll go over that._
