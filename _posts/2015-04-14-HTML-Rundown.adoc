@@ -60,7 +60,7 @@ TIP: `~` in a path is shorthand for your home directory. For example if your use
 
 Now, fire up your text editor of choice _(Sublime, Notepad++, TextMate, Vim)_. Create a new document and save it as `index.html` in your newly created `~/lessons/basic-html/` directory.  This should be enough to tell your editor that you are working with an html document, so it should be able to apply the appropriate highlighting and helpers.
 
-Now we start writing some HTML!  Start with the basic HTML structure _(you have your http://www.simplehtmlguide.com/cheatsheet.php[cheat sheet] right?)
+Now we start writing some HTML!  Start with the basic HTML structure _(you have your http://www.simplehtmlguide.com/cheatsheet.php[cheat sheet] right?)_
 ```
 <html>
  <head>
