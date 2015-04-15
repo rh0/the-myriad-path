@@ -1,5 +1,5 @@
 = HTML Rundown
-:hp-tags: introduction html
+:hp-tags: introduction, html
 
 I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out http://www.simplehtmlguide.com/whatishtml.php[this quick rundown].  Also it may be handy to keep this http://www.simplehtmlguide.com/cheatsheet.php[html cheat sheet] open in a window somewhere.  For now you can ignore tables, forms, and frames.  Focus just on the basic tags.
 
