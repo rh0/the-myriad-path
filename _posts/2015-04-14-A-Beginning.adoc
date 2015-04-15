@@ -3,7 +3,7 @@
 
 ====== Notice: This site will reflect poorly on my capacity to spell.
 
-I've set aside this small blog space to be a working lesson plan of sorts.  As we progress through a site build, I will post lessons here that will serve as a next step. I should note that I am making no attempt at thoroughness in these topics. I highly suggest the things you persue here be augmented with more information from around the web (I will provide links to such references on occasion).  I am simply attempting to get across the general concept, and posit a next step. 
+I've set aside this small blog space to be a working lesson plan of sorts.  As we progress through a site build, I will post lessons here that will serve as a next step. I should note that I am making no attempt at being thorough in these topics. I highly suggest that you augment the things you persue here with information from around the web (I will provide links to such references on occasion).  I am simply attempting to get across the general concept, and posit a next step. 
 
 Presently we have https://www.pinterest.com/irainsloppyhell/web-design/[a selection of site designs to choose from].  These designs contain complete `.psd` files, and are meant to represent the file you will likely recieve from a designer.  Look them over and when you have made a choice, we will move forward with the work.
 
