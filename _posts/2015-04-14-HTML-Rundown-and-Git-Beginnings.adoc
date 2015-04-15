@@ -1,0 +1,60 @@
+= HTML Rundown and Git Beginnings
+:hp-tags: introduction html git
+
+== HTML
+I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out http://www.simplehtmlguide.com/whatishtml.php[this quick rundown].  Also it may be handy to keep this http://www.simplehtmlguide.com/cheatsheet.php[html cheat sheet] open in a window somewhere.  For now you can ignore tables, forms, and frames.  Focus just on the basic tags.
+
+==== A Note on the Terminal
+Through most of these lessons I will be noting actions in the operating system from the command line.  I suggest trying to follow along as best you can in a terminal.  If you are still hanging onto Windows you might consider running https://www.cygwin.com/[Cygwin] a linux terminal like application, and good luck.  On Mac or Linux you can just open the terminal utility.  I will be noting the terminal prompt with `$>`, it is meaningless and arbitratily chosen. The default on your system will likely be differet.  I am using it only to denote the beginning of a command. So *do not type* `$>` when you see it in the explinations that follow.  If you haven't seen this before it feels like scary territory. Don't worry! It's just a textual representation of what, up until now, you have done through the graphical interface.  If you are curious checkout this http://community.linuxmint.com/tutorial/view/100[quick rundown and explination] of some basic commands.  If you're just wanting to get by, here is a small handful of commands that you should know:
+
+`cd`:: **C**hange **D**irectory. You follow the command with a file path. For instance `$>cd /home/poop/Documents` would move you to the documents directory. `..` is short hand for the previous directory. So if we are in `/home/poop/Documents`, `$>cd ..` will move us to `/home/poop`.
+`pwd`:: **P**resent **W**orking **D**irectory. This command will print the directory that you are currently in. Helpful if you are not sure where you are, or it is not immediately obvious.  Example:
+```
+$>pwd
+/home/poop/Documents
+```
+`ls`:: **L**i**s**t. This command will list the contents of a directory. The command by itself will show you the contents of the direcotry you are in.  Optionally you can pass it a directory path to list a directory that you are not in.  Example:
+```
+$>ls
+work personal somefile.txt index.html
+
+$>ls work
+resume.doc taxes.xls cover-letter.txt
+```
+`mkdir`:: **M**a**k**e **Dir**ectory.  This command allows you to make a directory in the directory you are presently in.  It takes your desired directory name as an argument. Example:
+```
+$>pwd
+/home/poop/Documents
+
+$>ls
+work personal somefile.txt index.html
+
+$>mkdir images
+
+$>ls
+work personal images somefile.txt index.html
+```
+
+`man` and `--help`:: Lookup in the **Man**ual. This takes a command as an argument and displays help text on the command.  This can be a little overwhelming at first, as some commands have LOTS of options.  Don't let it discourage you, you don't have to know EVERYTHING about a given command. And as always, when in doubt you can do some googling for a simpler explination.  Alternatively, many commands have *help* output that you can access by passing the `--help` option.  For example:
+```
+$>ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+etc...
+```
+
+As we continue I will go over several more commands. But this should be enough to at least allow you to move around and look at things.  Try and play with the command line, and get used to moving through directories, and looking at files.
+
+A good quick task is to create yourself a `lessons` directory somewhere in your home directory to store the files you will be working with as we progress.
+
+==== The Task
+In your `lessons` directory create a new folder for this lesson (eg. `~/lessons/basic-html/`).
+
+TIP: `~` in a path is shorthand for your home directory. For example on linux, if your username is _poop_ then `~` would represent `/home/poop`.  In other words `$>cd ~` would be the same as `$>cd /home/poop`.
