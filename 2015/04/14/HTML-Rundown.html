@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>HTML Rundown</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//rh0.github.io/the-myriad-path/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//rh0.github.io/the-myriad-path/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html" />
+    
+    <meta property="og:site_name" content="The Myriad Path" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="HTML Rundown" />
+    <meta property="og:description" content="I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out this quick rundown.  Also it may be handy to keep this html cheat sheet open in..." />
+    <meta property="og:url" content="https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html" />
+    <meta property="article:published_time" content="2015-04-14T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-04-15T03:45:47.998Z" />
+    <meta property="article:tag" content="introduction html" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HTML Rundown" />
+    <meta name="twitter:description" content="I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out this quick rundown.  Also it may be handy to keep this html cheat sheet open in..." />
+    <meta name="twitter:url" content="https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "The Myriad Path",
+    "author": {
+        "@type": "Person",
+        "name": "Ryan Oles",
+        "image": "https://avatars.githubusercontent.com/u/1043361?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://theoleschool.com"
+    },
+    "headline": "HTML Rundown",
+    "url": "https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html",
+    "datePublished": "2015-04-14T05:00:00.000Z",
+    "dateModified": "2015-04-15T03:45:47.998Z",
+    "keywords": "introduction html",
+    "description": "I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out this quick rundown.  Also it may be handy to keep this html cheat sheet open in..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="The Myriad Path" href="https://rh0.github.io/the-myriad-path/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-introduction-html">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://rh0.github.io/the-myriad-path">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://rh0.github.io/the-myriad-path/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-introduction-html">
+
+        <header class="post-header">
+            <h1 class="post-title">HTML Rundown</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-04-14">14 April 2015</time>  on <a href="https://rh0.github.io/the-myriad-path/tag/introduction-html">introduction html</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out <a href="http://www.simplehtmlguide.com/whatishtml.php">this quick rundown</a>.  Also it may be handy to keep this <a href="http://www.simplehtmlguide.com/cheatsheet.php">html cheat sheet</a> open in a window somewhere.  For now you can ignore tables, forms, and frames.  Focus just on the basic tags.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_a_note_on_the_terminal">A Note on the Terminal</h4>
+<div class="paragraph">
+<p>Through most of these lessons I will be noting actions in the operating system from the command line.  I suggest trying to follow along as best you can in a terminal.  If you are still hanging onto Windows you might consider running <a href="https://www.cygwin.com/">Cygwin</a> a linux terminal like application, and good luck.  On Mac or Linux you can just open the terminal utility.  I will be noting the terminal prompt with <code>$&gt;</code>, it is meaningless and arbitratily chosen. The default on your system will likely be differet.  I am using it only to denote the beginning of a command. So <strong>do not type</strong> <code>$&gt;</code> when you see it in the explinations that follow.  If you haven&#8217;t seen this before it feels like scary territory. Don&#8217;t worry! It&#8217;s just a textual representation of what, up until now, you have done through the graphical interface.  If you are curious checkout this <a href="http://community.linuxmint.com/tutorial/view/100">quick rundown and explination</a> of some basic commands.  If you&#8217;re just wanting to get by, here is a small handful of commands that you should know:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>cd</code></dt>
+<dd>
+<p><strong>C</strong>hange <strong>D</strong>irectory. You follow the command with a file path. For instance <code>$&gt;cd /home/poop/Documents</code> would move you to the documents directory. <code>..</code> is short hand for the previous directory. So if we are in <code>/home/poop/Documents</code>, <code>$&gt;cd ..</code> will move us to <code>/home/poop</code>.</p>
+</dd>
+<dt class="hdlist1"><code>pwd</code></dt>
+<dd>
+<p><strong>P</strong>resent <strong>W</strong>orking <strong>D</strong>irectory. This command will print the directory that you are currently in. Helpful if you are not sure where you are, or it is not immediately obvious.  Example:</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;pwd
+/home/poop/Documents</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>ls</code></dt>
+<dd>
+<p><strong>L</strong>i<strong>s</strong>t. This command will list the contents of a directory. The command by itself will show you the contents of the direcotry you are in.  Optionally you can pass it a directory path to list a directory that you are not in.  Example:</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;ls
+work personal somefile.txt index.html
+
+$&gt;ls work
+resume.doc taxes.xls cover-letter.txt</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>mkdir</code></dt>
+<dd>
+<p><strong>M</strong>a<strong>k</strong>e <strong>Dir</strong>ectory.  This command allows you to make a directory in the directory you are presently in.  It takes your desired directory name as an argument. Example:</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;pwd
+/home/poop/Documents
+
+$&gt;ls
+work personal somefile.txt index.html
+
+$&gt;mkdir images
+
+$&gt;ls
+work personal images somefile.txt index.html</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>man</code> and <code>--help</code></dt>
+<dd>
+<p>Lookup in the <strong>Man</strong>ual. This takes a command as an argument and displays help text on the command.  This can be a little overwhelming at first, as some commands have LOTS of options.  Don&#8217;t let it discourage you, you don&#8217;t have to know EVERYTHING about a given command. And as always, when in doubt you can do some googling for a simpler explination.  Alternatively, many commands have <strong>help</strong> output that you can access by passing the <code>--help</code> option.  For example:</p>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+etc...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As we continue I will go over several more commands. But this should be enough to at least allow you to move around and look at things.  Try and play with the command line, and get used to moving through directories, and looking at files.</p>
+</div>
+<div class="paragraph">
+<p>A good quick task is to create yourself a <code>lessons</code> directory somewhere in your home directory to store the files you will be working with as we progress.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_task">The Task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In your <code>lessons</code> directory create a new folder for this lesson (eg. <code>~/lessons/basic-html/</code>).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<code>~</code> in a path is shorthand for your home directory. For example if your username is <em>poop</em> then <code>~</code> would represent <code>/home/poop</code>.  In other words, <code>$&gt;cd ~</code> would be the same as <code>$&gt;cd /home/poop</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now, fire up your text editor of choice <em>(Sublime, Notepad++, TextMate, Vim)</em>. Create a new document and save it as <code>index.html</code> in your newly created <code>~/lessons/basic-html/</code> directory.  This should be enough to tell your editor that you are working with an html document, so it should be able to apply the appropriate highlighting and helpers.</p>
+</div>
+<div class="paragraph">
+<p>Now we start writing some HTML!  Start with the basic HTML structure _(you have your <a href="http://www.simplehtmlguide.com/cheatsheet.php">cheat sheet</a> right?)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;website title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  content of website ...
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the <code>&lt;title&gt;</code> tag replace <em>website title</em> with whatever you want to call you page. And within the <code>&lt;body&gt;</code> tag replace <em>content of website&#8230;&#8203;</em> with some HTML.  Maybe start with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;h1&gt;Helo World!&lt;/h1&gt;
+&lt;p&gt;Checking ou this wicked HTML.&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now save your changes, and open a web browser.  From within your browser go to <strong>file &gt; open</strong> in the menu or press <code>ctrl+o</code> and find and open your saved <code>index.html</code> file.  If all goes well you should see a page that shows the contents of the <code>&lt;body&gt;</code> tag in you html file.  Also note the title of the tab in your browser, it should be the same as the <code>&lt;title&gt;</code> tag content you replaced.</p>
+</div>
+<div class="sect5">
+<h6 id="_congradulations_you_made_a_webpage_no_really_you_did">Congradulations you made a webpage! No, really&#8230;&#8203; you did!</h6>
+<div class="paragraph">
+<p>Obviously, there is a fair amount of ground between our simple example, and the wide variety of webpages on the web.  At then end of the day however, all webpages boil down to this, simple HTML.</p>
+</div>
+<div class="paragraph">
+<p>Now go back to your editor and start filling in the <code>&lt;body&gt;</code> section a bit more. It can be anything! Explore the tags on the cheat sheet (you can ignore <code>&lt;table&gt;</code>, <code>&lt;form&gt;</code>, and <code>&lt;framest&gt;</code> for now).  You can use a text filler if you would like to beef up your paragraphs. <a href="http://www.lipsum.com/feed/html">Lorem Ipsum</a> text is common, just as a placeholder text.  Use several header tags, make some links. Generally just see what the tags do (and look like) with HTML. As you make changes to your file and want to see the results in the browser, simply save the changes in your editor then refresh the page in your browser.</p>
+</div>
+<div class="paragraph">
+<p>This doesn&#8217;t have to be long and certainly not fancy, but when you are done try and have something similar to <a href="https://rh0.github.io/lessons/1.0/">this</a>.</p>
+</div>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/1043361?v=3)"><span class="hidden">Ryan Oles's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Ryan Oles</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Austin, TX</span>
+                    <span class="author-link icon-link"><a href="http://theoleschool.com">http://theoleschool.com</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=HTML%20Rundown&amp;url=https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'themyriadpath'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://rh0.github.io/the-myriad-path">The Myriad Path</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
