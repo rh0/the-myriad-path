@@ -1,7 +1,6 @@
 = HTML Rundown
 :hp-tags: introduction html
 
-== HTML
 I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out http://www.simplehtmlguide.com/whatishtml.php[this quick rundown].  Also it may be handy to keep this http://www.simplehtmlguide.com/cheatsheet.php[html cheat sheet] open in a window somewhere.  For now you can ignore tables, forms, and frames.  Focus just on the basic tags.
 
 ==== A Note on the Terminal
@@ -54,7 +53,7 @@ As we continue I will go over several more commands. But this should be enough t
 
 A good quick task is to create yourself a `lessons` directory somewhere in your home directory to store the files you will be working with as we progress.
 
-==== The Task
+== The Task
 In your `lessons` directory create a new folder for this lesson (eg. `~/lessons/basic-html/`).
 
 TIP: `~` in a path is shorthand for your home directory. For example if your username is _poop_ then `~` would represent `/home/poop`.  In other words, `$>cd ~` would be the same as `$>cd /home/poop`.
