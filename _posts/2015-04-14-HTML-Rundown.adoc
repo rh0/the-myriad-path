@@ -71,13 +71,13 @@ Now we start writing some HTML!  Start with the basic HTML structure _(you have 
  </body>
 </html>
 ```
-In the `<title>` tag replace _website title_ with whatever you want to call you page. And within the `<body>` tag replace _content of website..._ with some HTML.  Maybe start with:
+In the `<title>` tag replace _website title_ with whatever you want to call your page. And within the `<body>` tag replace _content of website..._ with some HTML.  Maybe start with:
 ```
 <h1>Helo World!</h1>
-<p>Checking ou this wicked HTML.</p>
+<p>Checking out this wicked HTML.</p>
 
 ```
-Now save your changes, and open a web browser.  From within your browser go to *file > open* in the menu or press `ctrl+o` and find and open your saved `index.html` file.  If all goes well you should see a page that shows the contents of the `<body>` tag in you html file.  Also note the title of the tab in your browser, it should be the same as the `<title>` tag content you replaced.
+Now save your changes, and open a web browser.  From within your browser go to *file > open* in the menu or press *ctrl+o* and find and open your saved `index.html` file.  If all goes well you should see a page that shows the contents of your `<body>` tag.  Also note the title of the tab in your browser, it should be the same as the `<title>` tag content you replaced.
 
 ====== Congradulations you made a webpage! No, really... you did!
 
