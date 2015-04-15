@@ -1,0 +1,89 @@
+= HTML Rundown
+:hp-tags: introduction html
+
+== HTML
+I am going to assume same very basic understanding of html.  If you are a little shakey or want a quick refresher, check out http://www.simplehtmlguide.com/whatishtml.php[this quick rundown].  Also it may be handy to keep this http://www.simplehtmlguide.com/cheatsheet.php[html cheat sheet] open in a window somewhere.  For now you can ignore tables, forms, and frames.  Focus just on the basic tags.
+
+==== A Note on the Terminal
+Through most of these lessons I will be noting actions in the operating system from the command line.  I suggest trying to follow along as best you can in a terminal.  If you are still hanging onto Windows you might consider running https://www.cygwin.com/[Cygwin] a linux terminal like application, and good luck.  On Mac or Linux you can just open the terminal utility.  I will be noting the terminal prompt with `$>`, it is meaningless and arbitratily chosen. The default on your system will likely be differet.  I am using it only to denote the beginning of a command. So *do not type* `$>` when you see it in the explinations that follow.  If you haven't seen this before it feels like scary territory. Don't worry! It's just a textual representation of what, up until now, you have done through the graphical interface.  If you are curious checkout this http://community.linuxmint.com/tutorial/view/100[quick rundown and explination] of some basic commands.  If you're just wanting to get by, here is a small handful of commands that you should know:
+
+`cd`:: **C**hange **D**irectory. You follow the command with a file path. For instance `$>cd /home/poop/Documents` would move you to the documents directory. `..` is short hand for the previous directory. So if we are in `/home/poop/Documents`, `$>cd ..` will move us to `/home/poop`.
+`pwd`:: **P**resent **W**orking **D**irectory. This command will print the directory that you are currently in. Helpful if you are not sure where you are, or it is not immediately obvious.  Example:
+```
+$>pwd
+/home/poop/Documents
+```
+`ls`:: **L**i**s**t. This command will list the contents of a directory. The command by itself will show you the contents of the direcotry you are in.  Optionally you can pass it a directory path to list a directory that you are not in.  Example:
+```
+$>ls
+work personal somefile.txt index.html
+
+$>ls work
+resume.doc taxes.xls cover-letter.txt
+```
+`mkdir`:: **M**a**k**e **Dir**ectory.  This command allows you to make a directory in the directory you are presently in.  It takes your desired directory name as an argument. Example:
+```
+$>pwd
+/home/poop/Documents
+
+$>ls
+work personal somefile.txt index.html
+
+$>mkdir images
+
+$>ls
+work personal images somefile.txt index.html
+```
+
+`man` and `--help`:: Lookup in the **Man**ual. This takes a command as an argument and displays help text on the command.  This can be a little overwhelming at first, as some commands have LOTS of options.  Don't let it discourage you, you don't have to know EVERYTHING about a given command. And as always, when in doubt you can do some googling for a simpler explination.  Alternatively, many commands have *help* output that you can access by passing the `--help` option.  For example:
+```
+$>ls --help
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+etc...
+```
+
+As we continue I will go over several more commands. But this should be enough to at least allow you to move around and look at things.  Try and play with the command line, and get used to moving through directories, and looking at files.
+
+A good quick task is to create yourself a `lessons` directory somewhere in your home directory to store the files you will be working with as we progress.
+
+==== The Task
+In your `lessons` directory create a new folder for this lesson (eg. `~/lessons/basic-html/`).
+
+TIP: `~` in a path is shorthand for your home directory. For example if your username is _poop_ then `~` would represent `/home/poop`.  In other words, `$>cd ~` would be the same as `$>cd /home/poop`.
+
+Now, fire up your text editor of choice _(Sublime, Notepad++, TextMate, Vim)_. Create a new document and save it as `index.html` in your newly created `~/lessons/basic-html/` directory.  This should be enough to tell your editor that you are working with an html document, so it should be able to apply the appropriate highlighting and helpers.
+
+Now we start writing some HTML!  Start with the basic HTML structure _(you have your http://www.simplehtmlguide.com/cheatsheet.php[cheat sheet] right?)
+```
+<html>
+ <head>
+  <title>website title</title>
+ </head>
+ <body>
+  content of website ...
+ </body>
+</html>
+```
+In the `<title>` tag replace _website title_ with whatever you want to call you page. And within the `<body>` tag replace _content of website..._ with some HTML.  Maybe start with:
+```
+<h1>Helo World!</h1>
+<p>Checking ou this wicked HTML.</p>
+
+```
+Now save your changes, and open a web browser.  From within your browser go to *file > open* in the menu or press `ctrl+o` and find and open your saved `index.html` file.  If all goes well you should see a page that shows the contents of the `<body>` tag in you html file.  Also note the title of the tab in your browser, it should be the same as the `<title>` tag content you replaced.
+
+====== Congradulations you made a webpage! No, really... you did!
+
+Obviously, there is a fair amount of ground between our simple example, and the wide variety of webpages on the web.  At then end of the day however, all webpages boil down to this, simple HTML.
+
+Now go back to your editor and start filling in the `<body>` section a bit more. It can be anything! Explore the tags on the cheat sheet (you can ignore `<table>`, `<form>`, and `<framest>` for now).  You can use a text filler if you would like to beef up your paragraphs. http://www.lipsum.com/feed/html[Lorem Ipsum] text is common, just as a placeholder text.  Use several header tags, make some links. Generally just see what the tags do (and look like) with HTML. As you make changes to your file and want to see the results in the browser, simply save the changes in your editor then refresh the page in your browser. 
+
+This doesn't have to be long and certainly not fancy, but when you are done try and have something similar to https://rh0.github.io/lessons/1.0/[this].
