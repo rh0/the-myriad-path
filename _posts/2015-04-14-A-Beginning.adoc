@@ -1,5 +1,5 @@
 = A Beginning
-:hp-tags: environment
+:hp-tags: introdction, development environment
 
 I've set aside this small blog space to be a working lesson plan of sorts.  As we progress through a site build, I will post lessons here that will serve as a next step.  Presently we have https://www.pinterest.com/irainsloppyhell/web-design/[a selection of site designs to choose from].  These designs contain complete `.psd` files, and are meant to represent the file you will likely recieve from a designer.  Look them over and when you have made a choice, we will move forward with the work.
 
