@@ -20,6 +20,7 @@ work personal somefile.txt index.html
 $>ls work
 resume.doc taxes.xls cover-letter.txt
 ```
+
 `mkdir`:: **M**a**k**e **Dir**ectory.  This command allows you to make a directory in the directory you are presently in.  It takes your desired directory name as an argument. Example:
 ```
 $>pwd
@@ -61,7 +62,8 @@ TIP: `~` in a path is shorthand for your home directory. For example if your use
 Now, fire up your text editor of choice _(Sublime, Notepad++, TextMate, Vim)_. Create a new document and save it as `index.html` in your newly created `~/lessons/basic-html/` directory.  This should be enough to tell your editor that you are working with an html document, so it should be able to apply the appropriate highlighting and helpers.
 
 Now we start writing some HTML!  Start with the basic HTML structure _(you have your http://www.simplehtmlguide.com/cheatsheet.php[cheat sheet] right?)_
-```
+[source,html]
+----
 <html>
  <head>
   <title>website title</title>
@@ -70,13 +72,15 @@ Now we start writing some HTML!  Start with the basic HTML structure _(you have 
   content of website ...
  </body>
 </html>
-```
+----
+
 In the `<title>` tag replace _website title_ with whatever you want to call your page. And within the `<body>` tag replace _content of website..._ with some HTML.  Maybe start with:
-```
+[source,html]
+----
 <h1>Helo World!</h1>
 <p>Checking out this wicked HTML.</p>
 
-```
+----
 Now save your changes, and open a web browser.  From within your browser go to *file > open* in the menu or press *ctrl+o* and find and open your saved `index.html` file.  If all goes well you should see a page that shows the contents of your `<body>` tag.  Also note the title of the tab in your browser, it should be the same as the `<title>` tag content you replaced.
 
 ====== Congradulations you made a webpage! No, really... you did!
