@@ -1,0 +1,18 @@
+= A Beginning
+:hp-tags: introdction, development environment
+
+====== Notice: This site will reflect poorly on my capacity to spell.
+
+I've set aside this small blog space to be a working lesson plan of sorts.  As we progress through a site build, I will post lessons here that will serve as a next step. I should note that I am making no attempt at being thorough in these topics. I highly suggest that you augment the things you persue here with information from around the web (I will provide links to such references on occasion).  I am simply attempting to get across the general concept, and posit a next step. 
+
+Presently we have https://www.pinterest.com/irainsloppyhell/web-design/[a selection of site designs to choose from].  These designs contain complete `.psd` files, and are meant to represent the file you will likely recieve from a designer.  Look them over and when you have made a choice, we will move forward with the work.
+
+NOTE: Things will be a little overwhelming at first. You will be using unfamiliar applications, and working with your computer in a way you likely have not before.  This is normal! Don't be discouraged, some stuff may not make sense right away but will become clear in time. Development in general is a continual process of learning, it never stops.  So relish in that learning, and knowing that you will never run out of new things to explore and accomplish. When you find yourself lost, confused, or frustrated take a break, get some coffee/tea/beer, and come back to it. Again, its normal. Even the most seasoned developer will find himself lost and frustrated from time to time. The important thing is to stick with it!
+
+=== A few Thoughts on Your Environment
+
+While it is completely possible to develop from a windows machine, I would highly suggest working with OS X (freeBSD), or a linux distribution. _http://www.ubuntu.com/[Ubuntu] is probably the easiest to get going with._ While this may seem like more work upfront to use an unfamiliar operating system, it will wind up saving you a lot of time in the long run.  Most webservers run on a flavor of linux (redhat or centos usually) and it will be immensly useful to familiarize yourself with linux basics and the command line early on.
+
+TIP: Reguardless of your choice of OS you will need a good text editor.  https://www.sublimetext.com/[Sublime text] is a great choice to begin with. It goes out of it's way to help out the developer, with auto completion, syntax highlighting, auto closure, and basic document structure checks.
+
+If you haven't already, go ahead and https://github.com/[create a github account], and to https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[install git on your machiene].  We will be using this pretty much from the beginning, and is indespensible knowledge for any developer. _Don't worry if you don't understand it right now, we'll go over that._

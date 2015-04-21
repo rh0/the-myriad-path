@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "put your username here",
-    "repositoryName": "put your repository name here",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"rh0","repositoryName":"the-myriad-path","branch":"gh-pages"},"site":{"title":"The Myriad Path","description":"One way of many.","logo":"images/logo.png","cover":"images/city-shower.png","postsPerPage":"10","disqus":"themyriadpath","url":"https://rh0.github.io/the-myriad-path"},"socialnetwork":{"twitter":"https://twitter.com/rho_","github":"https://github.com/rh0"},"theme":{"name":"Casper","url":"//rh0.github.io/the-myriad-path/themes/Casper"}}
