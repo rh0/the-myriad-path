@@ -107,13 +107,14 @@ Now it's just rinse and repeat as you work, comitting at notable times.  I know 
 
 === GitHub
 
-As I meantoned previously, GitHub is a service that allows you to host and manage remote repositories.  Up to this point we have been working with a _local_ repository, that you created on your system.  Often times this may be all you need. I find myself creating and keeping a repository local when I am writing small proof of concept applications, or fiddling with a side project that is starting to become more complex.  Just having your local repository is great for that.  However, as your work grows in complexity and importance, or has a need for collaboration, It becomes important to both have a backup of your repository as well as a means to remotely access it.  Github does that for us.
+As I mentioned previously, GitHub is a service that allows you to host and manage remote repositories.  Up to this point we have been working with a _local_ repository, that you created on your system.  Often times this may be all you need. I find myself creating and keeping a repository local when I am writing small proof of concept applications, or fiddling with a side project that is starting to become more complex.  Just having your local repository is great for that.  However, as your work grows in complexity and importance, or has a need for collaboration, It becomes important to both have a backup of your repository as well as a means to remotely access it.  Github does that for us.
 
 NOTE: Before continuing, I highly suggest you setup an ssh key with GitHub. https://help.github.com/articles/generating-ssh-keys/[You can find instructions to do so here.]
 
-Our end goal here is to post our fancy html code to GitHub. We already have our code in a _local_ repository, now we need to create a _remote_ GitHub repository.  GitHub makes this very easy to do.  After logging into https://github.com/[github.com] click the bright green button that says *"+New Repository"* in the right sidebar (if you are having a hard time finding it you can https://github.com/new[navigate there directly].) You should now see a form asking for some information about your new repository.  Gve it a name like *basic_html*, and a description if you like. Be sure that the "Initialize this repository with a README" checkbox is *not checked*, as we are going to import the local repository we just created. Double check everything and click "Create Repository."
+==== Pushing to a remote
+Our end goal here is to post our fancy html code to GitHub. We already have our code in a _local_ repository, now we need to create a _remote_ GitHub repository.  GitHub makes this very easy to do.  After logging into https://github.com/[github.com] click the bright green button that says *"+New Repository"* in the right sidebar (if you are having a hard time finding it you can https://github.com/new[navigate there directly].) You should now see a form asking for some information about your new repository.  Gve it a name like *basic-html*, and a description if you like. Be sure that the "Initialize this repository with a README" checkbox is *not checked*, as we are going to import the local repository we just created. Double check everything and click "Create Repository."
 
-You should now be on your repository page.  There isn't much to see really, because for the moment your newly created github repository is empty.  Lets change that!  GitHub provides some good instruction here, and we will be using the second scenario the list *"…or push an existing repository from the command line."* So jump back to your terminal window, and makes sure you are still in the directory where we created our _local_ repository. Then simply follow the instructions GitHub provides.  Something like:
+You should now be on your repository page.  There isn't much to see yet, because for the moment your newly created github repository is empty.  Lets change that!  GitHub provides some good instruction here, and we will be using the second scenario the list *"…or push an existing repository from the command line."* So jump back to your terminal window, and makes sure you are still in the directory where we created our _local_ repository. Then simply follow the instructions GitHub provides.  Something like:
 ```
 $>git remote add origin git@github.com:<github-username>/basic-html.git
 
@@ -131,7 +132,7 @@ Branch master set up to track remote branch master from origin
 
 By running these commands on your local repository you have done a couple things. The first command says to _add_ a _remote_ repository (called _origin_) and point it at our newly created github repository. The second command says to _push_ local commits (remember making those) to _origin_ (the remote repository) on branch _master_.
 
-NOTE: If you are curious the `-u` option in the push command is short for "set __u__pstream tracking" and tells git that the remote branch you pushed to will track the branch you pushed from. Since we are only dealing with one branch (_master_) this isn't so important. *You don't need to include the `-u` in any future pushes*
+NOTE: If you are curious the `-u` option in the push command is short for "set __u__pstream tracking" and tells git that the remote branch you pushed to will track the branch you pushed from. Since we are only dealing with one branch (_master_) this isn't so important. *You don't need to include the `-u` in any subsiquent pushes*
 
 So after running these commands, if everything went well, refresh the repository page in your browser and you should see your spiffy `index.html` file sitting on the screen.  Check out the information on this page, and click around and explore a bit. GitHub shows a lot of information about the state of your (remote) repository, and is a great way to review commits, and see just what's going on.
 
@@ -139,7 +140,7 @@ So after running these commands, if everything went well, refresh the repository
 
 If you're still with me then GREAT JOB! You've done a lot.  But things are still looking a little bare up on your github repository page. We need to create a README file to let the world know about our super sweet html file.  Now you can of course just click the "Add a README" button and let github walk you through it, but I think it is worth while to create this file locally, and push it up to the repository. This will demonstrate a typical workflow when working with a remote.
 
-Jump over to your text editor and create a new file. Do a save as and call it `README.md` and save it in your `basic-html` folder. The same place your `index.html` file is.  The `.md` suffix denotes a https://en.wikipedia.org/wiki/Markdown[markdown] file.  If you are not familiar with markdown, it's simply a formatting shorthand. GitHub has its own https://help.github.com/articles/markdown-basics/[flavour of markdown that you can review]. So in your newly created file add some markdown content describing whats in your awesome repository. Mess with it, and put whatever you want. Something like:
+Jump over to your text editor and create a new file. Do a "save as" and call it `README.md` and save it in your `basic-html` folder. The same place your `index.html` file is.  The `.md` suffix denotes a https://en.wikipedia.org/wiki/Markdown[markdown] file.  If you are not familiar with markdown, it's simply a formatting shorthand. GitHub has its own https://help.github.com/articles/markdown-basics/[flavor of markdown that you can review]. So in your newly created file add some markdown content describing your awesome repository. Mess with it, and put whatever you want. Something like:
 
 [source,markdown]
 ----
@@ -158,8 +159,16 @@ $>git push origin master
 ```
 After the command completes, go back to your browser and refresh your repository page. You should see you nice new readme file rendered in all it's glory.
 
-From here, take a little time and play with this workflow.  Make some changes to the html file or the readme or both. Commit them and push them up to github.  Add other files if you want, and commit and push those.  Just get used to the make changes > add/commit > push sequence.  If you haven't already continue to explore the repository page and the links therein.  Especially note the "commits" link just above the branch dropdown. You can see you commit history all laid out, and even drill down to view the actual changes.
+From here, take a little time and play with this workflow.  Make some changes to the html file or the readme or both. Commit them and push them up to github. You don't have to push one commit at a time, you can make several before you do a push. It still works the same way. Add other files if you want, and commit and push those.  Just get used to the sequence: 
+
+. make changes 
+. add/commit
+. repeat 1 and 2 until ready to share
+. push to the remote
+
+If you haven't already continue to explore the repository page and the links therein.  Especially note the "commits" link just above the branch dropdown. You can see your commit history log, and even drill down to view the actual changes.
 
 
 
+== Pshew!
 This was a long one with a lot of information. Go slow and play around with it. Let things sink in a little bit.  While you are messing around on github, go ahead and follow me https://github.com/rh0 it will let me know what your github username is, so I can start to look over your work as we progress. Dun dun dun....
