@@ -3,20 +3,22 @@
 
 At this point you should have an `index.html` file sitting in a `basic-html` directory. _If you don't know what I'm talking about then be sure to run through the https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html[previous post]._  You also hopefully https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[have git installed on your machine], and have a https://github.com/join[github.com account].
 
-If you are unsure if git is installed on your machine, open a terminal and run the command:
+If you are unsure if git is installed, open a terminal window and run the command:
 ```
 $>git --version
 git version 2.2.2 #or whatever your version number is
 ```
 
 == So what is all this git business?
-This is a topic that can (and has) filled many books.  It is a very flexible program and can be used in a number of ways.  I will atempt to give a _very_ simplified rundown, and walk through some of its basic usage.  Just enough to get you going, and fufill basic development needs.  As we progress with lessons we may begin to explore some of the more advanced git features.
+This is a topic that can (and has) filled many books.  It is a very flexible program and can be used in a number of ways.  I will atempt to give a _very_ simplified rundown, and walk through some of its basic usage.  Just enough to get you going and fufill basic development needs.  As we progress with lessons we may begin to explore some of the more advanced git features.
 
-First things first. There is often a lot of confusion about the relationship between GitHub and git.  *They are not synonymous.*  Git is https://en.wikipedia.org/wiki/Revision_control[revision (or version) control software], something you install and use on a system. You can use git on your local machine without GitHub, or even without an internet connection.  GitHub is a web service, that allows you to have remotely accessible git repositories. A git cloud of sorts. \*cringes* So why use GitHub at all?  You certainly don't have to, and there are other places that provide a simliar service. https://bitbucket.org/[Bitbucket] is a popular GitHub alternative, and you will often find git services on integrated development servers, like https://pantheon.io/[Pantheon] or https://www.heroku.com/[Heroku]. I like GitHub, because it is very intuative and helpful. A lot of what is going on is represented graphically, complete with explinations.  This will help tremendously as you learn.  To answer the question more generally, we want to use a remote service like GitHub to be able to collaborate with other developers, and to serve as a backup or "master copy" of our code.
+First things first. There is often a lot of confusion about the relationship between GitHub and Git.  *They are not synonymous.*  Git is https://en.wikipedia.org/wiki/Revision_control[revision (or version) control software], something you install and use on a system. You can use git on your local machine without GitHub, or even without an internet connection.  GitHub is a web service, that allows you to have remotely accessible git repositories. A git cloud \*cringes* of sorts. 
+
+Why use GitHub at all?  You certainly don't have to, and there are other places that provide a simliar service. https://bitbucket.org/[Bitbucket] is a popular GitHub alternative, and you will often find git services on integrated development servers, like https://pantheon.io/[Pantheon] or https://www.heroku.com/[Heroku]. I like GitHub, because it is very intuative and helpful. A lot of what is going on is represented graphically, complete with explinations.  This will help tremendously as you learn.  To answer the question more generally, we want to use a remote service like GitHub to be able to collaborate with other developers, and to serve as a backup or _master copy_ of our code.
 
 ===== Right... so what IS git?
 
-To really understand what git does you need to understand the principle of https://git-scm.herokuapp.com/book/en/v2/Getting-Started-About-Version-Control[version control].  This can get a little confusing very quickly, with all kinds of charts trying to explain what happens to a codebase when it is under version control. But at it's heart, version control can be thought of as a _working history_.  Think about applications you have used, say Google Chrome for instance.  You have been happily using Chrome for a while and it works great. One day Chrome performs updates, and suddenly things break. Pages don't load, videos don't play. You can't browse Reddit! OH NO! So you do some research in another browser and see that the current release of Chrome is buggy, and it is suggested you roll back to the old version.  You see that you are on Chrome version 43, so you install the previous Chrome version 42, and all is well again.  This (albeit poor) example is version control in action. There is a release history to Chrome, and when one doesnt work you can go back to a place where it did. Further, you can dig into the release history and see just what changes were made to Chrome that may have caused the errors.  A version control system allows you to do this, its like a long series of placeholders for your files. As you are programming (altering files) you are leaving a trail of crumbs incase you get lost or something goes wrong. The record is always there for you to see, and at any time you can retrace your steps to where you were before things got ugly.  Of course version control offeres seeral other benifits besides this, most notable being able to collaborate asyncronously with other developers, branching features out of the main history to allow you to work without messing up the main codebase, and allowing for tagging and release cycles. But for now think of version control and git as a _working history_ of your efforts.
+To really understand what git does you need to understand the principles of https://git-scm.herokuapp.com/book/en/v2/Getting-Started-About-Version-Control[version control].  This can get a little confusing very quickly, with all kinds of charts trying to explain what happens to a codebase as it goes through commit, branch, and merge operations. But at it's heart, version control can be thought of as a _working history_.  Think about applications you have used, say Google Chrome for instance.  You have been happily using Chrome for a while and it works great. One day Chrome performs updates, and suddenly things break. Pages don't load, videos don't play. You can't browse Reddit! OH NO! So you do some research in another browser and see that the current release of Chrome is buggy, and it is suggested you roll back to the old version.  You see that you are on Chrome version 43, so you install the previous Chrome version 42, and all is well again.  This (albeit poor) example is version control in action. There is a release history to Chrome, and when one version doesnt work you can go back to a previous version where it does. Further, you can dig into the release history and see what changes were made to Chrome that may have caused the errors.  A version control system allows you to do this, its like a long series of placeholders for your files. As you are programming (altering files) you are leaving a trail of crumbs incase you get lost or something goes wrong. The record is always there for you to see, and at any time you can retrace your steps to where you were before things got ugly.  Of course version control offeres several other benifits besides this, most notable being able to collaborate asyncronously with other developers, branching features out of the main history to allow you to work without messing up the main codebase, and allowing for tagging and release cycles. But for now think of version control and git as a _working history_ of your efforts.
 
 == Lets git to it. \*gunshot*
 
@@ -25,11 +27,14 @@ Open a terminal window and navigate to your `~/lessons/basic-html` directory (or
 $>ls
 index.html
 ```
+
+NOTE: The first time you run git, it may complain that you have not setup your identity.  It is a good idea to https://git-scm.herokuapp.com/book/en/v2/Getting-Started-First-Time-Git-Setup[go ahead and do so], so that you can be identified in the logs. Your name and email can be whatever you want.
+
 ====== Initialize
 Now we need to tell git that we want to place the contents of our current directory under version control. This is something that only needs to happen once. We do this by running
 ```
 $>git init
-Initialized empty Git repository in /home/username/lessons/basic-html/.git/
+Initialized empty Git repository in /home/<username>/lessons/basic-html/.git/
 ```
 This has created and empty repository in our `~/lessons/basic-html` directory. A useful git command that I encourage you to run often is `git status`.  It will give you the current state of the repository that manages the directory you are in (if one exists).
 ```
@@ -48,7 +53,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 This tells us that our repository has been created, and we are on the first commit.  It also mentions what branch we are on.  Typically the default branch is _master_.  For now we won't worry too much about branches, just know we are working with the _master_ branch.
 
 ====== Add
-You can see in out status report that our `index.html` file is untracked.  This means that it is not yet under version control. The status message gives the advice to _add_ the file so we can include it in the next commit.
+You can see in out status report that our `index.html` file is untracked.  This means that it is not yet under version control. The status message gives the advice to _add_ the file so we can include it in the next commit.  We can do so by running:
 ```
 $>git add index.html
 
@@ -62,12 +67,12 @@ Changes to be committed:
 
 	new file:   index.html
 ```
-Our index.html file is now ready to be committed.
+Our index.html file is now ready _(staged)_ to be committed.
 
 TIP: If you have a lot of files to add you can run `git add -A` to stage everything for the next commit.
 
 ====== Commit
-Think of commits as a page in your working histroy. Commits are the bread and butter of version control.  These are the markers that you can go back to, your crumb trail in the forest.  When your files have reached a state that is notible, you should do a commit. Notibly, the _initial commit_ kicks everything off, all of your files should be added, and we mark this as the starting point of our _working history_.  *Each commit must have an accompanying commit message.* This is usually a short blurb describing what changes have happened. We can do this all in one command with the `-m` option.
+Think of commits as a page in your working histroy. Commits are the bread and butter of version control.  These are the markers that you can go back to, your crumb trail in the forest.  When your files have reached a state that is notable, you should do a commit. The _initial commit_ kicks everything off. All of your files should be added, and we mark this as the starting point of our _working history_.  *Each commit must have an accompanying commit message.* This is usually a short blurb describing what changes have happened. We can do this all in one command with the `-m` option.
 ```
 $>git commit -m"initial commit"
 [master (root-commit) 5cc9a38] initial commit
@@ -78,7 +83,7 @@ $>git status
 On branch master
 nothing to commit, working directory clean
 ```
-Commits should be made whenever there are clear divisions of work being done, or at landmark places you would like to remember. You have just completed a small task or feature, commit. You've cleaned up spacing in your code, commit. You've added a bunch of comments to your code, good for you, commit! You've done some file restructuring in your directory, commit. You finally debugged that weird problem, commit!  You get the idea...  It is better to commit too much than to little, use them liberally and keep the messages short but meaningful.
+Commits should be made whenever there are clear divisions of work being done, or at landmark places you would like to remember. You have just completed a small task or feature, commit. You've cleaned up spacing in your code, commit. You've added a bunch of comments to your code, good for you, commit! You've done some file restructuring in your directory, commit. You finally debugged that weird problem, commit!  You get the idea...  It is better to commit too much than to little, use them liberally and keep the messages short but meaningful.  Remember, each commit is a single crumb in your breadcrumb trail.
 
 As an example of this workflow, open your `index.html` file in your text editor, and make some changes. It's not important what you change, just change something. Add a new `<h2>` text, remove some paragraphs, etc. When you are done save your changes and jump back to your terminal window.
 ```
@@ -101,4 +106,8 @@ $>git commit -am"changes to html"
 Now it's just rinse and repeat as you work, comitting at notable times.  I know it seems like this may be more effort initially, but the benifits are very real, and will become clear as you use git more and as we move forward.
 
 === GitHub
+
+As I meantoned previously, GitHub is a service that allows you to host and manage remote repositories.  Up to this point we have been working with a _local_ repository, that you created on your system.  Often times this may be all you need. I find myself creating and keeping a repository local when I am writing small proof of concept applications, or fiddling with a side project that is starting to become more complex.  Just having your local repository is great for that.  However, as your work grows in complexity and importance, or has a need for collaboration, It becomes important to both have a backup of your repository as well as a means to remotely access it.  Github does that for us.
+
+NOTE: Before continuing, I highly suggest you setup an ssh key with GitHub. https://help.github.com/articles/generating-ssh-keys/[You can find instructions to do so here.]
 
