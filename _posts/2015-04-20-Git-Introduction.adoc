@@ -1,7 +1,7 @@
 = Git Introduction
 :hp-tags: introduction, git
 
-At this point you should have an `index.html` file sitting in your lesson directory. _If you don't know what I'm talking about then be sure to run through the https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html[previous post]._  You also hopefully https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[have git installed on your machine], and a https://github.com/join[github.com account].
+At this point you should have an `index.html` file sitting in a `basic-html` directory. _If you don't know what I'm talking about then be sure to run through the https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html[previous post]._  You also hopefully https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[have git installed on your machine], and have a https://github.com/join[github.com account].
 
 If you are unsure if git is installed on your machine, open a terminal and run the command:
 ```
@@ -19,3 +19,82 @@ First things first. There is often a lot of confusion about the relationship bet
 To really understand what git does you need to understand the principle of https://git-scm.herokuapp.com/book/en/v2/Getting-Started-About-Version-Control[version control].  This can get a little confusing very quickly, with all kinds of charts trying to explain what happens to a codebase when it is under version control. But at it's heart, version control can be thought of as a _working history_.  Think about applications you have used, say Google Chrome for instance.  You have been happily using Chrome for a while and it works great. One day Chrome performs updates, and suddenly things break. Pages don't load, videos don't play. You can't browse Reddit! OH NO! So you do some research in another browser and see that the current release of Chrome is buggy, and it is suggested you roll back to the old version.  You see that you are on Chrome version 43, so you install the previous Chrome version 42, and all is well again.  This (albeit poor) example is version control in action. There is a release history to Chrome, and when one doesnt work you can go back to a place where it did. Further, you can dig into the release history and see just what changes were made to Chrome that may have caused the errors.  A version control system allows you to do this, its like a long series of placeholders for your files. As you are programming (altering files) you are leaving a trail of crumbs incase you get lost or something goes wrong. The record is always there for you to see, and at any time you can retrace your steps to where you were before things got ugly.  Of course version control offeres seeral other benifits besides this, most notable being able to collaborate asyncronously with other developers, branching features out of the main history to allow you to work without messing up the main codebase, and allowing for tagging and release cycles. But for now think of version control and git as a _working history_ of your efforts.
 
 === So lets jump in.
+
+Open a terminal window and navigate to your `~/lessons/basic-html` directory (or wherever you decided to keep your html file from the previous lesson.) Make sure you see the file when you `ls`.
+```
+$>ls
+index.html
+```
+====== Initialize
+Now we need to tell git that we want to place the contents of our current directory under version control. This is something that only needs to happen once. We do this by running
+```
+$>git init
+Initialized empty Git repository in /home/username/lessons/basic-html/.git/
+```
+This has created and empty repository in our `~/lessons/basic-html` directory. A useful git command that I encourage you to run often is `git status`.  It will give you the current state of the repository that manages the directory you are in (if one exists).
+```
+$>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+This tells us that our repository has been created, and we are on the first commit.  It also mentions what branch we are on.  Typically the default branch is _master_.  For now we won't worry too much about branches, just know we are working with the _master_ branch.
+
+====== Add
+You can see in out status report that our `index.html` file is untracked.  This means that it is not yet under version control. The status message gives the advice to _add_ the file so we can include it in the next commit.
+```
+$>git add index.html
+
+$>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+```
+Our index.html file is now ready to be committed.
+
+TIP: If you have a lot of files to add you can run `git add -A` to stage everything for the next commit.
+
+====== Commit
+Think of commits as a page in your working histroy. Commits are the bread and butter of version control.  These are the markers that you can go back to, your crumb trail in the forest.  When your files have reached a state that is notible, you should do a commit. Notibly, the _initial commit_ kicks everything off, all of your files should be added, and we mark this as the starting point of our _working history_.  *Each commit must have an accompanying commit message.* This is usually a short blurb describing what changes have happened. We can do this all in one command with the `-m` option.
+```
+$>git commit -m"initial commit"
+[master (root-commit) 5cc9a38] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+$>git status
+On branch master
+nothing to commit, working directory clean
+```
+Commits should be made whenever there are clear divisions of work being done, or at landmark places you would like to remember. You have just completed a small task or feature, commit. You've cleaned up spacing in your code, commit. You've added a bunch of comments to your code, good for you, commit! You've done some file restructuring in your directory, commit. You finally debugged that weird problem, commit!  You get the idea...  It is better to commit too much than to little, use them liberally and keep the messages short but meaningful.
+
+As an example of this workflow, open your `index.html` file in your text editor, and make some changes. It's not important what you change, just change something. Add a new `<h2>` text, remove some paragraphs, etc. When you are done save your changes and jump back to your terminal window.
+```
+$>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+`git status` once again is full of helpful information. You can see that git is aware that we have modified our file, and is giving us a suggestion if we wish to commit those changes.  You can do like we did before and run `git add index.html` followed by `git commit -m"some message"` but for modifications like this we can do it all in one command.
+```
+$>git commit -am"changes to html"
+[master 43a2ee6] changes to html
+ 1 file changed, 1 insertion(+)
+```
