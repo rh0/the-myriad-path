@@ -1,0 +1,21 @@
+= Git Introduction
+:hp-tags: introduction, git
+
+At this point you should have an `index.html` file sitting in your lesson directory. _If you don't know what I'm talking about then be sure to run through the https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html[previous post]._  You also hopefully https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[have git installed on your machine], and a https://github.com/join[github.com account].
+
+If you are unsure if git is installed on your machine, open a terminal and run the command:
+```
+$>git --version
+git version 2.2.2 #or whatever your version number is
+```
+
+=== So what is all this git business?
+This is a topic that can (and has) filled many books.  It is a very flexible program and can be used in a number of ways.  I will atempt to give a _very_ simplified rundown, and walk through some of its basic usage.  Just enough to get you going, and fufill basic development needs.  As we progress with lessons we may begin to explore some of the more advanced git features.
+
+First things first. There is often a lot of confusion about the relationship between GitHub and git.  *They are not synonymous.*  Git is https://en.wikipedia.org/wiki/Revision_control[revision (or version) control software], something you install and use on a system. You can use git on your local machine without GitHub, or even without an internet connection.  GitHub is a web service, that allows you to have remotely accessible git repositories. A git cloud of sorts. \*cringes* So why use GitHub at all?  You certainly don't have to, and there are other places that provide a simliar service. https://bitbucket.org/[Bitbucket] is a popular GitHub alternative, and you will often find git services on integrated development servers, like https://pantheon.io/[Pantheon] or https://www.heroku.com/[Heroku]. I like GitHub, because it is very intuative and helpful. A lot of what is going on is represented graphically, complete with explinations.  This will help tremendously as you learn.  To answer the question more generally, we want to use a remote service like GitHub to be able to collaborate with other developers, and to serve as a backup or "master copy" of our code.
+
+===== Right... so what IS git?
+
+To really understand what git does you need to understand the principle of https://git-scm.herokuapp.com/book/en/v2/Getting-Started-About-Version-Control[version control].  This can get a little confusing very quickly, with all kinds of charts trying to explain what happens to a codebase when it is under version control. But at it's heart, version control can be thought of as a _working history_.  Think about applications you have used, say Google Chrome for instance.  You have been happily using Chrome for a while and it works great. One day Chrome performs updates, and suddenly things break. Pages don't load, videos don't play. You can't browse Reddit! OH NO! So you do some research in another browser and see that the current release of Chrome is buggy, and it is suggested you roll back to the old version.  You see that you are on Chrome version 43, so you install the previous Chrome version 42, and all is well again.  This (albeit poor) example is version control in action. There is a release history to Chrome, and when one doesnt work you can go back to a place where it did. Further, you can dig into the release history and see just what changes were made to Chrome that may have caused the errors.  A version control system allows you to do this, its like a long series of placeholders for your files. As you are programming (altering files) you are leaving a trail of crumbs incase you get lost or something goes wrong. The record is always there for you to see, and at any time you can retrace your steps to where you were before things got ugly.  Of course version control offeres seeral other benifits besides this, most notable being able to collaborate asyncronously with other developers, branching features out of the main history to allow you to work without messing up the main codebase, and allowing for tagging and release cycles. But for now think of version control and git as a _working history_ of your efforts.
+
+=== So lets jump in.
