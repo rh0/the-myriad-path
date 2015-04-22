@@ -161,7 +161,7 @@ When you have successfully done this and your git status is clean, you're ready 
 ```
 $>git push origin master
 ```
-After the command completes, go back to your browser and refresh your repository page. You should see you nice new readme file rendered in all it's glory.
+After the command completes, go back to your browser and refresh your repository page. You should see your nice new readme file rendered in all it's glory.
 
 From here, take a little time and play with this workflow.  Make some changes to the html file or the readme or both. Commit them and push them up to github. You don't have to push one commit at a time, you can make several before you do a push. It still works the same way. Add other files if you want, and commit and push those.  Just get used to the sequence: 
 
