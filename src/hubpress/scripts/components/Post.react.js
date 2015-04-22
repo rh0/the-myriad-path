@@ -131,6 +131,7 @@ let Post = React.createClass({
             style= {{border: '1px solid black'}}
             lineNumbers={false}
             lineWrapping={true}
+            disableSpellcheck={false}
             autofocus={true}
             onChange={this.handleChange}
             />
