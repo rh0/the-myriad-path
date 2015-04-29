@@ -1,0 +1,6 @@
+= GitHub Pages
+:hp-tags: git, webservers
+
+After some thought, and while we're on the subject, I think it may be a good time to introduce https://pages.github.com/[GitHub pages].  To put it simply, github pages exposes a very simple https://en.wikipedia.org/wiki/Web_server[webserver] for files in a branch of a git repository.  A webserver _serves_ files to the _web_.  When your browser makes a request to an webserver the webserver will expose the files in its contol for the browser to render.
+
+== Somtehing or another
