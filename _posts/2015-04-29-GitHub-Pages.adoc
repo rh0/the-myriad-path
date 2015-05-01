@@ -1,14 +1,18 @@
 = GitHub Pages
-:hp-tags: git, webservers
+:hp-tags: git, webserver
 
-After some thought, and while we're on the subject, I think it may be a good time to introduce https://pages.github.com/[GitHub pages].  To put it simply, github pages exposes a very simple https://en.wikipedia.org/wiki/Web_server[webserver] for files in a branch of a git repository.  A webserver _serves_ files to the _web_.  When your browser makes a request to an webserver the webserver will expose the files in its contol for the browser to render.  What this all amounts to is that you will be able to see your code rendered out on the internet (at a given ip, or domain name) rather than pointing your browser at a local file.  This of course means that others _( I )_ can see your work online rather than having to look over your shoulder, or pull down your code and open locally in my browser.  In large part, this is why I would like to introduce this sooner than later.
-There are benifits for you too of course.  You will get a basic feeling for what a webserver does, a very brief look at branches in git, and an example of how folder structure is represented as paths in a url and how to link to them.
+After some thought, and while we're on the subject, I think it may be a good time to introduce https://pages.github.com/[GitHub pages].  To put it simply, GitHub pages exposes a very simple https://en.wikipedia.org/wiki/Web_server[webserver] for files in a branch of a git repository.  A webserver _serves_ files to the _web_.  When your browser makes a request to a webserver the webserver will expose the files in its contol for the browser to render.  What this all amounts to is that you will be able to see your code rendered out on the internet (at a given ip, or domain name) just like when you point your browser at a local file as you have been.  This of course means that others ( I ) can see your work online rather than having to look over your shoulder, or pull down your code and open locally in my browser.  In large part, this is why I would like to introduce this sooner than later.
+There are benifits for you too of course.  You will get a basic feeling for what a webserver does, and a very brief look at branches in git.
 
 === Enable GitHub Pages
-We're going to do this on the github repository that you created in the last lesson, go ahead and navigate there in your browser.  Look to the sidebar and click on *settings* (it has a hammer and screwdriver icon.)  In the settings page you should see a section called *GitHub Pages* with some information on how to enable it.  Github pages looks for a branch in your repository called _gh-pages_ so we will need to make this branch and push it to github. A https://git-scm.herokuapp.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging[branch] in git can be thought of as a copy of your current history that you can continue to modify, without altering the _master_ branch. Almost like a fork in your breadcrumb trail.  At this point it's not real important to understand the branching concept fully, we're just touching on it briefly to setup GitHub pages.
+We're going to do this on the github repository that you created in the last lesson, go ahead and navigate there in your browser.  Look to the sidebar and click on *settings* (it has a hammer and screwdriver icon.)  In the settings page you should see a section called *GitHub Pages* with some information on how to enable it.  Github pages looks for a specially named branch in your repository called _gh-pages_ so we will need to make this branch and push it to github. A https://git-scm.herokuapp.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging[branch] in git can be thought of as a copy of your current history that you can continue to modify without altering the _master_ branch. Almost like a fork in your breadcrumb trail.  At this point it's not real important to understand the branching concept fully, we're just touching on it briefly to setup GitHub pages.
 
 ===== Create the gh-pages branch.
-Jump over to your terminal window and navigate to your the directory where you setup your repository.  It might be a good idea to run `git status` to make sure everything is clean. If not go ahead and commit or remove changes that are pending. Now to create the new branch run:
+Open a your terminal window and navigate to the directory where you setup your repository.  It might be a good idea to run `git status` to make sure everything is clean. If it is not, go ahead and commit or remove changes that are pending. 
+
+TIP: To remove any uncommitted changes, and bring your files back to the state of your last commit you can run `git reset --hard HEAD`. This command says _reset_ the repository to _HEAD_ (a shorthand for the most recent commit). The _--hard_ option means that your local files will be changed to match. Use this command with caution though, *it will delete any uncommitted changes*.
+
+Now to create the new gh-pages branch run:
 ```
 $>git branch gh-pages
 ```
@@ -20,9 +24,9 @@ $>git branch -a
 * master
   remotes/origin/master
 ```
-NOTE: The `-a` in the previous command is a flag to show both local and remote branches. If you run this command without it, it will only show the local branches
+NOTE: The `-a` in the previous command is an option to show both local and remote branches. If you run this command without it, it will only show the local branches
 
-The astrisk indicates the current branch you are on, to switch branches we need to run:
+The astrisk indicates the current _local_ branch you are on. We use `git checkout` to switch branches, so lets switch to our newly created gh-pages branch:
 ```
 $>git checkout gh-pages
 Switched to branch 'gh-pages'
@@ -36,4 +40,14 @@ To git@github.com:<github-username>/pages-test.git
 ```
 You may have noticed this is a lot like the `git push origin master` we have been doing.  In this case we're __push__ing to GitHub (_origin_) the branch _gh-pages_. Since this branch doesn't yet exist on GitHub, you recive a message that it has been created.
 
-Now jump back to your browser that has the settings page we navigated to earlier and refreh. You should now see a green notification that _"Your site is published at \http://<github-username>.github.io/<repository-name>"_
+Now jump back to your browser that has the settings page we navigated to earlier and refreh. You should see a green notification that _"Your site is published at \http://<github-username>.github.io/<repository-name>."_  While you're on the settings page, near the top you will see a dropdown form element labeled "Default branch," change this to our new _gh-pages_ branch. Now go ahead and click the link to see your rendered HTML.  *Congradulations you've just posted your HTML document for the internet to see!*
+
+While you're here go ahead and copy this URL and navigate back to your repository page on GitHub. Near the top there is a "Website" form field.  Paste the URL to your new github pages page here and hit save.  I like to do this because it will preserve the link at the top of your GitHub repository page. This way you won't have to go fishing for it every time.
+
+
+=== Wait... BWAH?!
+So this all may seem a little strange.  What we are doing is leaning on a feature that GitHub provides us.  The gh-pages branch was arbitratily chosen by GitHub to be the branch they expose to their webserver.  Outside of GitHub there is nothing special about the gh-pages branch, it's just another branch.  I've chosen to include this lesson because it is an easy way to post your code to the web using only git, rather than having to worry about setting up and managing a webserver (which is yet another layer of complexity.)  So this way GitHub handles all of the server side stuff for us, and all we have to worry about it pushing what we want on the web to this branch.
+
+If the branching was confusing, don't worry too much about it.  Going forward (at least for a little while) we will be only working with the gh-pages branch. _(Be sure you have set this as your default branch on GitHub.)_  So now instead of `git push origin master` you will be running `git push origin gh-pages`.  This is the only change in the workflow we talked about last time.
+
+Of course if there are any questions, please ask.  If your curious, or still unsure of what his whole GitHub pages thing is all about, I'm happy to try and explain it further.
