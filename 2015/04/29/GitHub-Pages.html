@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>GitHub Pages</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//rh0.github.io/the-myriad-path/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//rh0.github.io/the-myriad-path/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html" />
+    
+    <meta property="og:site_name" content="The Myriad Path" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="GitHub Pages" />
+    <meta property="og:description" content="After some thought, and while we&amp;#8217;re on the subject, I think it may be a good time to introduce GitHub pages.  To put it simply, GitHub pages exposes a very simple webserver for files in a branch of..." />
+    <meta property="og:url" content="https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html" />
+    <meta property="article:published_time" content="2015-04-29T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-05-01T13:34:38.242Z" />
+    <meta property="article:tag" content="git" />
+    <meta property="article:tag" content="webserver" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="GitHub Pages" />
+    <meta name="twitter:description" content="After some thought, and while we&amp;#8217;re on the subject, I think it may be a good time to introduce GitHub pages.  To put it simply, GitHub pages exposes a very simple webserver for files in a branch of..." />
+    <meta name="twitter:url" content="https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "The Myriad Path",
+    "author": {
+        "@type": "Person",
+        "name": "Ryan Oles",
+        "image": "https://avatars.githubusercontent.com/u/1043361?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://theoleschool.com"
+    },
+    "headline": "GitHub Pages",
+    "url": "https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html",
+    "datePublished": "2015-04-29T05:00:00.000Z",
+    "dateModified": "2015-05-01T13:34:38.242Z",
+    "keywords": "git,  webserver",
+    "description": "After some thought, and while we&amp;#8217;re on the subject, I think it may be a good time to introduce GitHub pages.  To put it simply, GitHub pages exposes a very simple webserver for files in a branch of..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="The Myriad Path" href="https://rh0.github.io/the-myriad-path/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-git tag-webserver">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://rh0.github.io/the-myriad-path">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://rh0.github.io/the-myriad-path/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-git tag-webserver">
+
+        <header class="post-header">
+            <h1 class="post-title">GitHub Pages</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-04-29">29 April 2015</time>  on <a href="https://rh0.github.io/the-myriad-path/tag/git">git</a>, <a href="https://rh0.github.io/the-myriad-path/tag/webserver"> webserver</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>After some thought, and while we&#8217;re on the subject, I think it may be a good time to introduce <a href="https://pages.github.com/">GitHub pages</a>.  To put it simply, GitHub pages exposes a very simple <a href="https://en.wikipedia.org/wiki/Web_server">webserver</a> for files in a branch of a git repository.  A webserver <em>serves</em> files to the <em>web</em>.  When your browser makes a request to a webserver the webserver will expose the files in its contol for the browser to render.  What this all amounts to is that you will be able to see your code rendered out on the internet (at a given ip, or domain name) just like when you point your browser at a local file as you have been.  This of course means that others ( I ) can see your work online rather than having to look over your shoulder, or pull down your code and open locally in my browser.  In large part, this is why I would like to introduce this sooner than later.
+There are benifits for you too of course.  You will get a basic feeling for what a webserver does, and a very brief look at branches in git.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enable_github_pages">Enable GitHub Pages</h3>
+<div class="paragraph">
+<p>We&#8217;re going to do this on the github repository that you created in the last lesson, go ahead and navigate there in your browser.  Look to the sidebar and click on <strong>settings</strong> (it has a hammer and screwdriver icon.)  In the settings page you should see a section called <strong>GitHub Pages</strong> with some information on how to enable it.  Github pages looks for a specially named branch in your repository called <em>gh-pages</em> so we will need to make this branch and push it to github. A <a href="https://git-scm.herokuapp.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">branch</a> in git can be thought of as a copy of your current history that you can continue to modify without altering the <em>master</em> branch. Almost like a fork in your breadcrumb trail.  At this point it&#8217;s not real important to understand the branching concept fully, we&#8217;re just touching on it briefly to setup GitHub pages.</p>
+</div>
+<div class="sect4">
+<h5 id="_create_the_gh_pages_branch">Create the gh-pages branch.</h5>
+<div class="paragraph">
+<p>Open a your terminal window and navigate to the directory where you setup your repository.  It might be a good idea to run <code>git status</code> to make sure everything is clean. If it is not, go ahead and commit or remove changes that are pending.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To remove any uncommitted changes, and bring your files back to the state of your last commit you can run <code>git reset --hard HEAD</code>. This command says <em>reset</em> the repository to <em>HEAD</em> (a shorthand for the most recent commit). The <em>--hard</em> option means that your local files will be changed to match. Use this command with caution though, <strong>it will delete any uncommitted changes</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now to create the new gh-pages branch run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;git branch gh-pages</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Easy enough. This creates the new branch. You can view your branches by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;git branch -a
+  gh-pages
+* master
+  remotes/origin/master</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>-a</code> in the previous command is an option to show both local and remote branches. If you run this command without it, it will only show the local branches
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The astrisk indicates the current <em>local</em> branch you are on. We use <code>git checkout</code> to switch branches, so lets switch to our newly created gh-pages branch:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;git checkout gh-pages
+Switched to branch 'gh-pages'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are now working on the <code>gh-pages</code> branch. If you run <code>git status</code> or <code>git branch</code> it should reflect this. Now we need to push this new branch up to our <em>remote</em> (GitHub).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$&gt;git push origin gh-pages
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:&lt;github-username&gt;/pages-test.git
+ * [new branch]      gh-pages -&gt; gh-pages</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You may have noticed this is a lot like the <code>git push origin master</code> we have been doing.  In this case we&#8217;re <em>push</em>ing to GitHub (<em>origin</em>) the branch <em>gh-pages</em>. Since this branch doesn&#8217;t yet exist on GitHub, you recive a message that it has been created.</p>
+</div>
+<div class="paragraph">
+<p>Now jump back to your browser that has the settings page we navigated to earlier and refreh. You should see a green notification that <em>"Your site is published at http://&lt;github-username&gt;.github.io/&lt;repository-name&gt;."</em>  While you&#8217;re on the settings page, near the top you will see a dropdown form element labeled "Default branch," change this to our new <em>gh-pages</em> branch. Now go ahead and click the link to see your rendered HTML.  <strong>Congradulations you&#8217;ve just posted your HTML document for the internet to see!</strong></p>
+</div>
+<div class="paragraph">
+<p>While you&#8217;re here go ahead and copy this URL and navigate back to your repository page on GitHub. Near the top there is a "Website" form field.  Paste the URL to your new github pages page here and hit save.  I like to do this because it will preserve the link at the top of your GitHub repository page. This way you won&#8217;t have to go fishing for it every time.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wait_bwah">Wait&#8230;&#8203; BWAH?!</h3>
+<div class="paragraph">
+<p>So this all may seem a little strange.  What we are doing is leaning on a feature that GitHub provides us.  The gh-pages branch was arbitratily chosen by GitHub to be the branch they expose to their webserver.  Outside of GitHub there is nothing special about the gh-pages branch, it&#8217;s just another branch.  I&#8217;ve chosen to include this lesson because it is an easy way to post your code to the web using only git, rather than having to worry about setting up and managing a webserver (which is yet another layer of complexity.)  So this way GitHub handles all of the server side stuff for us, and all we have to worry about it pushing what we want on the web to this branch.</p>
+</div>
+<div class="paragraph">
+<p>If the branching was confusing, don&#8217;t worry too much about it.  Going forward (at least for a little while) we will be only working with the gh-pages branch. <em>(Be sure you have set this as your default branch on GitHub.)</em>  So now instead of <code>git push origin master</code> you will be running <code>git push origin gh-pages</code>.  This is the only change in the workflow we talked about last time.</p>
+</div>
+<div class="paragraph">
+<p>Of course if there are any questions, please ask.  If your curious, or still unsure of what his whole GitHub pages thing is all about, I&#8217;m happy to try and explain it further.</p>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/1043361?v=3)"><span class="hidden">Ryan Oles's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Ryan Oles</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Austin, TX</span>
+                    <span class="author-link icon-link"><a href="http://theoleschool.com">http://theoleschool.com</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=GitHub%20Pages&amp;url=https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://rh0.github.io/the-myriad-path/2015/04/29/GitHub-Pages.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'themyriadpath'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://rh0.github.io/the-myriad-path">The Myriad Path</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
