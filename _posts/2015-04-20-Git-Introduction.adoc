@@ -1,5 +1,5 @@
 = Git Introduction
-:hp-tags: introduction, git
+:hp-tags: git, introduction
 
 At this point you should have an `index.html` file sitting in a `basic-html` directory. _If you don't know what I'm talking about then be sure to run through the https://rh0.github.io/the-myriad-path/2015/04/14/HTML-Rundown.html[previous post]._  You also hopefully https://git-scm.herokuapp.com/book/en/v2/Getting-Started-Installing-Git[have git installed on your machine], and have a https://github.com/join[github.com account].
 
