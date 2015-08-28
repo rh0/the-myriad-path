@@ -36,7 +36,7 @@ Oh this is easy, right?! Well, yes and no...  Perhaps we want our `<h2>` to have
 ```
 Things are getting crowded, but not too horrible I guess.  However, consider that *inline styles only apply to the specific element they are present on*.  In other words, our styling will only be visible on that single `<h2>`. If we wanted to reuse those styles on other `<h2>` elements in the document we will have to copy all of our styling to each individual element.  As you can imagine this will be a lot of extra work for us, the HTML will become nearly illegible, and making changes to the styles will be nightmareish at best. Plus, what happened to all that preaching about seperating presentation and content? We are clearly violating that, right? There is a better way. As simple and as tempting as they may be at times, *inline styles should be a last resort*.
 
-==== Selectors, Decleration Blocks, and the Internal Stylesheet
+==== Selectors, Decleration Blocks, and the Internal Stylesheets
 
 Rather than adressing individual elements one by one, we can use *selectors* to adress entire groups of elements.  The styles to be applied to elements that match the selector are laid out in a *decleration block* wrapped by curly braces. For example if we wanted *all* `h2` elements in our document to have the styles from our last exapmle we would write:
 ```
@@ -89,6 +89,9 @@ Now any paragraph with the _pop_ class will have red text.
 <p class="pop">Maaaaaaan look at this text pop!</p>
 ```
 
-:note:
-Classes are designated with a *.* in css and ids with an *#*.
+NOTE: In CSS classes are designated with a *.* and ids with an *#*.  Ids are given higher precidence in CSS, and are intended to be used as unique identifyers of content, whereas classes tend to be liberally reused.
+
+==== External Stylesheets
+
+Though we have achieved a nice seperation of presentation and content in our HTML document, once again things can become unruly as our styles become more complex.  Imagin haveing a dozens or even hundreds of style declarations in the head of an HTML document.  Again things have become generally unmanigable.
 
