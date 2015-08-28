@@ -2,3 +2,93 @@
 :hp-tags: introduction, css
 
 You've probably been looking at your HTML thinking, "This is flat and boring. Nothing like the crazy diversity I see out on the web."  This, as you may know, is because straight HTML focuses only on the *content* of a document.  To work with document *presentation* we need to introduce https://en.wikipedia.org/wiki/Cascading_Style_Sheets[Cascading Style Sheets] or CSS for short.  This seperation of content and presentation was intentional by the https://en.wikipedia.org/wiki/World_Wide_Web_Consortium[W3C] and allows for a lot of flexibility.  The content can be consumed or used in another way without the extra markup of the presentation polluting it.  Further, the presentation can be altered without worrying about changing the content.  A great illustration of this is the http://www.csszengarden.com/[CSS Zen Garden].  They have a collection of styles that people have done on top of the same bit of HTML.  In other words, on each of these pages ( http://www.csszengarden.com/220/[1], http://www.csszengarden.com/218/[2], http://www.csszengarden.com/215/[3] ) the exact same HTML document is used, the only difference between them is the CSS.  Click through a few of the designs, the visual differences that just a set of CSS instructions can provide is pretty amazing.
+
+== The Basics
+
+At its core CSS uses *proporties* with a given *value* that tells the browser how to "paint" or render given element. In this simple example
+```
+background-color: red;
+```
+`background` is the property and `red` is the value. Its really as simple as that.  Occasionally you may see something that appears to break this convention, but usually it is just a shorthand for the simple `property: value;` syntax.  For example
+```
+margin: 10px 0 9px 20px;
+```
+is a shorthand for
+```
+margin-top: 10px;
+margin-right: 0;
+margin-bottom: 9px;
+margin-left: 20px;
+```
+Both will achieve the same thing, but if you don't have to type as much if you know the shorthand.  You will get more comfortable with some of the CSS shortcuts as we go along.  Your editors auto complete, or reading the https://developer.mozilla.org/en-US/docs/Web/CSS/Reference[property description] should fill in any any questions about strange shorthand values.
+
+So we need some way of attaching these property/value render instructions to an element. In other words _"What thing on the page should have a red background or crazy margins?"_
+
+==== Inline stlyes
+
+The simplest way of doing this is *inline* on the element itself using the `style` keyword. As an example say we wanted to make the text of one of our `<h2>` elements blue.
+```
+<h2 style="color: blue;">BEEP BOOP!</h2>
+```
+Oh this is easy, right?! Well, yes and no...  Perhaps we want our `<h2>` to have a yellow background, a padding of 2px, a font size of 15px, and center the text. Well okay:
+```
+<h2 style="color:blue; background-color: yellow; padding: 2px; font-size: 15px; text-align: center;">BEEP BOOP!</h2>
+```
+Things are getting crowded, but not too horrible I guess.  However, consider that *inline styles only apply to the specific element they are present on*.  In other words, our styling will only be visible on that single `<h2>`. If we wanted to reuse those styles on other `<h2>` elements in the document we will have to copy all of our styling to each individual element.  As you can imagine this will be a lot of extra work for us, the HTML will become nearly illegible, and making changes to the styles will be nightmareish at best. Plus, what happened to all that preaching about seperating presentation and content? We are clearly violating that, right? There is a better way. As simple and as tempting as they may be at times, *inline styles should be a last resort*.
+
+==== Selectors, Decleration Blocks, and the Internal Stylesheet
+
+Rather than adressing individual elements one by one, we can use *selectors* to adress entire groups of elements.  The styles to be applied to elements that match the selector are laid out in a *decleration block* wrapped by curly braces. For example if we wanted *all* `h2` elements in our document to have the styles from our last exapmle we would write:
+```
+h2 {
+  color: blue;
+  background-color: yellow;
+  padding: 2px;
+  font-size: 15px;
+  text-align: center;
+}
+```
+Ahh much easier to read, but where should this decleration block go?  We can lean on the `<style>` to allow for this.  We can technically put this element anywhere in the document, but typically it is placed within the `<head>` section.
+```
+<head>
+  <title>My Sweet Webpage</title>
+  <style type="text/css">
+  h2 {
+    color: blue;
+    background-color: yellow;
+    padding: 2px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  p {
+    padding-left: 20px;
+    line-height: 15px;
+    font-size: 12px;
+  }
+  </style>
+</head>
+<body>
+  <h2>BEEP BOOP</h2>
+  <p>Some random text</p>
+  <p>More great text</p>
+</body>
+```
+Things are looking much better now. Clear sections for presentation, and content. Now if we need to adjust the styles for all `h2` elements, we know just where to look.
+
+After you get going styling with this method a need will quickly arise to be more specific about applying a style.  Perhaps you wish to make a certain paragraph really "pop."  We want to be able to adjust the color of these paragraphs text, but not the color of all paragraphs.  What to do?  Falling back to and inline style may be tempting, but resist!  We can use the *class* or *id* attributes of html elements to help us out.
+
+We can add a new decleration block to house our desired style
+```
+p.pop {
+  color: red;
+}
+```
+Now any paragraph with the _pop_ class will have red text.
+```
+<p class="pop">Maaaaaaan look at this text pop!</p>
+```
+
+:note:
+Classes are designated with a *.* in css and ids with an *#*.
+
