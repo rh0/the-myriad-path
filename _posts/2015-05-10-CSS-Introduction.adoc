@@ -36,7 +36,7 @@ Oh this is easy, right?! Well, yes and no...  Perhaps we want our `<h2>` to have
 ```
 Things are getting crowded, but not too horrible I guess.  However, consider that *inline styles only apply to the specific element they are present on*.  In other words, our styling will only be visible on that single `<h2>`. If we wanted to reuse those styles on other `<h2>` elements in the document we will have to copy all of our styling to each individual element.  As you can imagine this will be a lot of extra work for us, the HTML will become nearly illegible, and making changes to the styles will be nightmareish at best. Plus, what happened to all that preaching about seperating presentation and content? We are clearly violating that, right? There is a better way. As simple and as tempting as they may be at times, *inline styles should be a last resort*.
 
-==== Selectors, Decleration Blocks, and the Internal Stylesheets
+==== Selectors, Decleration Blocks, and Internal Stylesheets
 
 Rather than adressing individual elements one by one, we can use *selectors* to adress entire groups of elements.  The styles to be applied to elements that match the selector are laid out in a *decleration block* wrapped by curly braces. For example if we wanted *all* `h2` elements in our document to have the styles from our last exapmle we would write:
 ```
@@ -53,19 +53,19 @@ Ahh much easier to read, but where should this decleration block go?  We can lea
 <head>
   <title>My Sweet Webpage</title>
   <style type="text/css">
-  h2 {
-    color: blue;
-    background-color: yellow;
-    padding: 2px;
-    font-size: 15px;
-    text-align: center;
-  }
+    h2 {
+      color: blue;
+      background-color: yellow;
+      padding: 2px;
+      font-size: 15px;
+      text-align: center;
+    }
 
-  p {
-    padding-left: 20px;
-    line-height: 15px;
-    font-size: 12px;
-  }
+    p {
+      padding-left: 20px;
+      line-height: 15px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -93,5 +93,36 @@ NOTE: In CSS classes are designated with a *.* and ids with an *#*.  Ids are giv
 
 ==== External Stylesheets
 
-Though we have achieved a nice seperation of presentation and content in our HTML document, once again things can become unruly as our styles become more complex.  Imagin haveing a dozens or even hundreds of style declarations in the head of an HTML document.  Again things have become generally unmanigable.
+Though we have achieved a nice seperation of presentation and content in our HTML document, once again things can become unruly as our styles become more complex.  Imagine having dozens or even hundreds of style declarations in the head of an HTML document, again things will quickly become unmanigable.  A simple solution to this is to simply keep all of your css in a completely different file. This can be done using the `<link>` element to point at the file containing the CSS.
+```
+<html>
+  <head>
+    <title>My Sweet Webpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+...
+```
+In this example the HTML tells the browser to look for a file called _style.css_ in the same folder as the HTML file.  _style.css_ is a conventional name for the main stylesheet.  Now all of the CSS placed in the _style.css_ file will be loaded with the page.  You can of course link as many CSS files as you would like, and CSS is very often seperated into multiple files for the sake of organization and ease of use.
 
+NOTE: *Going forward we will only be using external stylesheets.*  It is concidered best practice to do so (aside from rare special cases.)  I mention internal stylesheets and inline styles only for awareness and so you will not be surprised when you run across them in the wild (you will.) However, they should really try to be avoided.
+
+== Cascading, Inheritance, and Specificity 
+Consider the following html and css:
+```
+<p class="wowzah">So then I said <strong>"What is this a hotel or something?"</strong></p>
+<p>What?!</p>
+```
+```
+p {
+  color: blue;
+}
+
+p.wowzah {
+ text-decoration: underline;
+}
+
+strong {
+ font-weight: bold;
+ color: red;
+}
+```
+How do you think the HTML will be rendered?
