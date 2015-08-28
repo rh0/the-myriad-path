@@ -106,7 +106,7 @@ In this example the HTML tells the browser to look for a file called _style.css_
 NOTE: *Going forward we will only be using external stylesheets.*  It is concidered best practice to do so (aside from rare special cases.)  I mention internal stylesheets and inline styles only for awareness and so you will not be surprised when you run across them in the wild (you will.) However, they should really try to be avoided.
 
 == Cascading, Inheritance, and Specificity 
-Consider the following html and css:
+Consider the following HTML and CSS:
 ```
 <p class="wowzah">So then I said <strong>"What is this a hotel or something?"</strong></p>
 <p>What?!</p>
@@ -114,15 +114,25 @@ Consider the following html and css:
 ```
 p {
   color: blue;
+  text-align: center;
 }
 
 p.wowzah {
  text-decoration: underline;
 }
 
+p {
+  text-align: right;
+}
+
+p strong {
+ color: yellow;
+}
+
 strong {
- font-weight: bold;
  color: red;
 }
+
 ```
-How do you think the HTML will be rendered?
+How do you think this will be rendered? Try it out locally and see if you can figure out the behavior.
+
