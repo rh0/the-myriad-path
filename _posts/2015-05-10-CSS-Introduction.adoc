@@ -125,14 +125,18 @@ p {
   text-align: right;
 }
 
-p strong {
- color: yellow;
-}
-
 strong {
  color: red;
 }
 
+p strong {
+ color: yellow;
+}
 ```
-How do you think this will be rendered? Try it out locally and see if you can figure out the behavior.
+_How do you think this will be rendered? Try this out locally and see if you can figure out the behavior.  We'll run through the explination on the next post._
 
+== Going Forward
+
+As I mentioned, we will be using almost exclusively external stylsheets. Go ahead and add a *style.css* file to your basic-html project.  Play around with styling some of the elements using this file.  See if you can sort out the questions from the last section.
+
+Beginning with the next post I will be shifting to a series of challenges.  Hopefully this will help give you some practice with some of the git stuff we have covered, and it will serve as a tool for further instruction in CSS.  Styling really isn't going to make a lot of sense until you jump in and do it.  So get ready, you'll soon have some work to do!
