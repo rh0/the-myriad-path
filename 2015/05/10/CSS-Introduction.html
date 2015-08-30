@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>CSS Introduction</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//rh0.github.io/the-myriad-path/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//rh0.github.io/the-myriad-path/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html" />
+    
+    <meta property="og:site_name" content="The Myriad Path" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CSS Introduction" />
+    <meta property="og:description" content="You&amp;#8217;ve probably been looking at your HTML thinking, &quot;This is flat and boring. Nothing like the crazy diversity I see out on the web.&quot;  This, as you may know, is because straight HTML focuses only on the content..." />
+    <meta property="og:url" content="https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html" />
+    <meta property="article:published_time" content="2015-05-10T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-08-30T16:39:02.630Z" />
+    <meta property="article:tag" content="introduction" />
+    <meta property="article:tag" content="css" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CSS Introduction" />
+    <meta name="twitter:description" content="You&amp;#8217;ve probably been looking at your HTML thinking, &quot;This is flat and boring. Nothing like the crazy diversity I see out on the web.&quot;  This, as you may know, is because straight HTML focuses only on the content..." />
+    <meta name="twitter:url" content="https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "The Myriad Path",
+    "author": {
+        "@type": "Person",
+        "name": "Ryan Oles",
+        "image": "https://avatars.githubusercontent.com/u/1043361?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://theoleschool.com"
+    },
+    "headline": "CSS Introduction",
+    "url": "https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html",
+    "datePublished": "2015-05-10T05:00:00.000Z",
+    "dateModified": "2015-08-30T16:39:02.630Z",
+    "keywords": "introduction,  css",
+    "description": "You&amp;#8217;ve probably been looking at your HTML thinking, &quot;This is flat and boring. Nothing like the crazy diversity I see out on the web.&quot;  This, as you may know, is because straight HTML focuses only on the content..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="The Myriad Path" href="https://rh0.github.io/the-myriad-path/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-introduction tag-css">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://rh0.github.io/the-myriad-path">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://rh0.github.io/the-myriad-path/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-introduction tag-css">
+
+        <header class="post-header">
+            <h1 class="post-title">CSS Introduction</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-05-10">10 May 2015</time>  on <a href="https://rh0.github.io/the-myriad-path/tag/introduction">introduction</a>, <a href="https://rh0.github.io/the-myriad-path/tag/css"> css</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You&#8217;ve probably been looking at your HTML thinking, "This is flat and boring. Nothing like the crazy diversity I see out on the web."  This, as you may know, is because straight HTML focuses only on the <strong>content</strong> of a document.  To work with document <strong>presentation</strong> we need to introduce <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets</a> or CSS for short.  This seperation of content and presentation was intentional by the <a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a> and allows for a lot of flexibility.  The content can be consumed or used in another way without the extra markup of the presentation polluting it.  Further, the presentation can be altered without worrying about changing the content.  A great illustration of this is the <a href="http://www.csszengarden.com/">CSS Zen Garden</a>.  They have a collection of styles that people have done on top of the same bit of HTML.  In other words, on each of these pages ( <a href="http://www.csszengarden.com/220/">1</a>, <a href="http://www.csszengarden.com/218/">2</a>, <a href="http://www.csszengarden.com/215/">3</a> ) the exact same HTML document is used, the only difference between them is the CSS.  Click through a few of the designs, the visual differences that just a set of CSS instructions can provide is pretty amazing.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_basics">The Basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At its core CSS uses <strong>proporties</strong> with a given <strong>value</strong> that tells the browser how to "paint" or render given element. In this simple example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>background-color: red;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>background-color</code> is the property and <code>red</code> is the value. Its really as simple as that.  Occasionally you may see something that appears to break this convention, but usually it is just a shorthand for the simple <code>property: value;</code> syntax.  For example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>margin: 10px 0 9px 20px;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is a shorthand for</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>margin-top: 10px;
+margin-right: 0;
+margin-bottom: 9px;
+margin-left: 20px;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Both will achieve the same thing, but if you don&#8217;t have to type as much if you know the shorthand.  You will get more comfortable with some of the CSS shortcuts as we go along.  Your editors auto complete, or reading the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">property description</a> should fill in any any questions about strange shorthand values.</p>
+</div>
+<div class="paragraph">
+<p>So we need some way of attaching these property/value render instructions to an element. In other words <em>"What thing on the page should have a red background or crazy margins?"</em></p>
+</div>
+<div class="sect3">
+<h4 id="_inline_stlyes">Inline stlyes</h4>
+<div class="paragraph">
+<p>The simplest way of doing this is <strong>inline</strong> on the element itself using the <code>style</code> keyword. As an example, say we want to make the text of one of our <code>&lt;h2&gt;</code> elements blue.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;h2 style="color: blue;"&gt;BEEP BOOP!&lt;/h2&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Oh this is easy, right?! Well, yes and no&#8230;&#8203;  Perhaps we want our <code>&lt;h2&gt;</code> to have a yellow background, a padding of 2px, a font size of 15px, and center the text. Well okay:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;h2 style="color:blue; background-color: yellow; padding: 2px; font-size: 15px; text-align: center;"&gt;BEEP BOOP!&lt;/h2&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Things are getting crowded, but not too horrible I guess.  However, consider that <strong>inline styles only apply to the specific element they are present on</strong>.  In other words, our styling will only be visible on that single <code>&lt;h2&gt;</code>. If we wanted to reuse those styles on other <code>&lt;h2&gt;</code> elements in the document we will have to copy all of our styling to each individual element.  As you can imagine this will be a lot of extra work for us, the HTML will become nearly illegible, and making changes to the styles will be nightmareish at best. What happened to all that preaching about seperating presentation and content? We are clearly violating that, right? There is a better way. As simple and as tempting as they may be at times, <strong>inline styles should be a last resort</strong>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_selectors_decleration_blocks_and_internal_stylesheets">Selectors, Decleration Blocks, and Internal Stylesheets</h4>
+<div class="paragraph">
+<p>Rather than adressing individual elements one by one, we can use <strong>selectors</strong> to adress entire groups of elements.  The styles to be applied to elements that match the selector are laid out in a <strong>decleration block</strong> wrapped by curly braces. For example if we wanted <strong>all</strong> <code>h2</code> elements in our document to have the styles from our last exapmle we would write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>h2 {
+  color: blue;
+  background-color: yellow;
+  padding: 2px;
+  font-size: 15px;
+  text-align: center;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ahh much easier to read, but where should this decleration block go?  We can lean on the <code>&lt;style&gt;</code> element to allow for this.  We can technically put this element anywhere in the document, but typically it is placed within the <code>&lt;head&gt;</code> section.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;head&gt;
+  &lt;title&gt;My Sweet Webpage&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+    h2 {
+      color: blue;
+      background-color: yellow;
+      padding: 2px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    p {
+      padding-left: 20px;
+      line-height: 15px;
+      font-size: 12px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;BEEP BOOP&lt;/h2&gt;
+  &lt;p&gt;Some random text&lt;/p&gt;
+  &lt;p&gt;More great text&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Things are looking much better now. Clear sections for presentation, and content. Now if we need to adjust the styles for all <code>h2</code> elements, we know just where to look.</p>
+</div>
+<div class="paragraph">
+<p>After you get going styling with this method a need will quickly arise to be more specific about applying a style.  Perhaps you wish to make a certain paragraph really "pop."  We want to be able to adjust the color of these paragraphs text, but not the color of all paragraphs.  What to do?  Falling back to and inline style may be tempting, but resist!  We can use the <strong>class</strong> or <strong>id</strong> attributes of html elements to help us out.</p>
+</div>
+<div class="paragraph">
+<p>We can add a new decleration block to house our desired style</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>p.pop {
+  color: red;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now any paragraph with the <em>pop</em> class will have red text.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;p class="pop"&gt;Maaaaaaan look at this text pop!&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In CSS classes are designated with a <strong>.</strong> and ids with an <strong>#</strong>.  Ids are given higher precidence in CSS, and are intended to be used as unique identifiers of content, whereas classes tend to be liberally reused.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_external_stylesheets">External Stylesheets</h4>
+<div class="paragraph">
+<p>Though we have achieved a nice seperation of presentation and content in our HTML document, once again things can become unruly as our styles become more complex.  Imagine having dozens or even hundreds of style declarations in the head of an HTML document, again things will quickly become unmanigable.  A simple solution to this is to simply keep all of your css in a completely different file. This can be done using the <code>&lt;link&gt;</code> element to point at the file containing the CSS.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Sweet Webpage&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example the HTML tells the browser to look for a file called <em>style.css</em> in the same folder as the HTML file.  <em>style.css</em> is a conventional name for the main stylesheet.  Now all of the CSS placed in the <em>style.css</em> file will be loaded with the page.  You can of course link as many CSS files as you would like, and CSS is very often seperated into multiple files for the sake of organization and ease of use.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<strong>Going forward we will only be using external stylesheets.</strong>  It is considered best practice to do so (aside from rare special cases.)  I mention internal stylesheets and inline styles so you will not be surprised when you run across them in the wild (you will.) However, they should really try to be avoided.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cascading_inheritance_and_specificity">Cascading, Inheritance, and Specificity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Consider the following HTML and CSS:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;p class="wowzah"&gt;So then I said &lt;strong&gt;"What is this a hotel or something?"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What?!&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>p {
+  color: blue;
+  text-align: center;
+}
+
+p.wowzah {
+ text-decoration: underline;
+}
+
+p {
+  text-align: right;
+}
+
+strong {
+ color: red;
+}
+
+p strong {
+ color: yellow;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>How do you think this will be rendered? Try this out locally and see if you can figure out the behavior.  We&#8217;ll run through the explination on the next post.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_going_forward">Going Forward</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As I mentioned, we will be using almost exclusively external stylsheets. Go ahead and add a <strong>style.css</strong> file to your basic-html project.  Play around with styling some of the elements using this file.  See if you can sort out the questions from the last section.</p>
+</div>
+<div class="paragraph">
+<p>Beginning with the next post I will be shifting to a series of challenges.  Hopefully this will help give you some practice with some of the git stuff we have covered, and it will serve as a tool for further instruction in CSS.  Styling really isn&#8217;t going to make a lot of sense until you jump in and do it.  So get ready, you&#8217;ll soon have some work to do!</p>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/1043361?v=3)"><span class="hidden">Ryan Oles's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Ryan Oles</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Austin, TX</span>
+                    <span class="author-link icon-link"><a href="http://theoleschool.com">http://theoleschool.com</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=CSS%20Introduction&amp;url=https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://rh0.github.io/the-myriad-path/2015/05/10/CSS-Introduction.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'themyriadpath'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://rh0.github.io/the-myriad-path">The Myriad Path</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//rh0.github.io/the-myriad-path/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
