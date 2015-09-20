@@ -1,4 +1,4 @@
 = Box Model Challenge
 :hp-tags: css, challenge
 
-Hopefully you have spent some time playing with CSS. Setting up your CSS files, and have some familiarity 
+Before we dive in let's review the question posed in the last section of the last post.  I gave a small snippet of HTML and several CSS delclerations.  Where you able to reason how this would be rendered in the browser?  Its not pretty, and ends up https://rh0.github.io/lessons/css-intro/[looking like this].
