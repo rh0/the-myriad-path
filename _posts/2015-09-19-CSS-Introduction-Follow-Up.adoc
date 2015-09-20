@@ -1,5 +1,5 @@
 = CSS Introduction Follow Up
-:hp-tags: css, introduction
+:hp-tags: introduction, css
 
 Before we move on let's review the question posed in the last section of the last post.  I gave a small snippet of HTML and several CSS delclerations.  Were you able to reason how this would be rendered in the browser?  Its not pretty, and ends up https://rh0.github.io/lessons/css-intro/[looking like this].  Okay, but why?  I've intentionally made the CSS here a little gross in order to demonstrate a few of the properties of stylesheets.
 
