@@ -19,4 +19,8 @@ These properties can be visualized in _Figure 1._  The background property is re
 .The Box Model
 image::https://i.imgur.com/Ny8ZiPU.png[Box Model, link="https://i.imgur.com/Ny8ZiPU.png", float="left"]
 
-Bla lbah blah
+It is very helpful to keep this image in mind when working with elements on the page, especially as positioning and alignment become increasingly important.  Something that may not be immediately apparent, is that when we say, _"each element in the HTML document is represented by the box model,"_ this includes elements that contain other elements.  This outer element is often called a *wrapper*, and its *children*, the elements it contains, will appear in the _content area_ shown in _Figure 1._
+
+Often we will use wrappers to help with positioning and grouping of its child elements on the page.  This allows us to have discrete sections.  Think header, footer, sidebar, etc.  Very often this *parent* (wrapper) element will be the `<div>`.
+
+[NOTE] Before folks start getting up in arms
