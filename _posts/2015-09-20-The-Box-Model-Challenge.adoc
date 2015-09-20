@@ -23,4 +23,4 @@ It is very helpful to keep this image in mind when working with elements on the 
 
 Often we will use wrappers to help with positioning and grouping of its child elements on the page.  This allows us to have discrete sections.  Think header, footer, sidebar, etc.  Very often this *parent* (wrapper) element will be the `<div>`.
 
-[NOTE] Before folks start getting up in arms
+NOTE: Before folks start lighting the torches, I should mention there are many more potential wrappers, especially for big site sections. https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning[HTML5 has specific wrappers for a lot of the site sections you may build out] like `<header>`, `<footer>`, `<nav>`, and even `<section>`.  I'm blatantly ignoring them for now, and only focusing on the more generic `<div>` to try and avoid information overload. Don't worry, HTML5 will be adressed once everyone has their legs, so to speak.
