@@ -1,5 +1,22 @@
 = The Box Model Challenge
 :hp-tags: css, challenge
-:hp-image: https://i.imgur.com/Ny8ZiPU.png
 
-Hopefully by now you have been fiddling around with some CSS.
+At this poing you should be able to create a simple HTML document, link it to external stylesheets, commit your work, and push your work up to GitHub.  If you are unable to do this please review the previous posts.  Hopefully you have taken things a little further than I have laid out here, and spent some time playing with HTML/CSS. If not then get ready, because you are about to!
+
+== The Box Model
+Each element in an HTML document is represented by a rectangular box. This box can be provided with a host of properties via CSS.  The most notable (and the ones we will focus on for now) include:
+
+* width / height
+* background color / images
+* borders
+* margins
+* padding 
+
+These properties can be visualized in _Figure 1._  The background property is represented by the green color.
+
+
+[[img-boxModel]]
+.The Box Model
+image::https://i.imgur.com/Ny8ZiPU.png[Box Model, link="https://i.imgur.com/Ny8ZiPU.png", float="left"]
+
+Bla lbah blah
