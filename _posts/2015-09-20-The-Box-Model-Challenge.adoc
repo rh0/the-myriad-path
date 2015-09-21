@@ -17,10 +17,94 @@ These properties can be visualized in _Figure 1._  The background property is re
 
 [[img-boxModel]]
 .The Box Model
-image::https://i.imgur.com/Ny8ZiPU.png[Box Model, link="https://i.imgur.com/Ny8ZiPU.png", float="left"]
+image::https://i.imgur.com/Ny8ZiPU.png[Box Model, link="https://i.imgur.com/Ny8ZiPU.png"]
 
-It is very helpful to keep this image in mind when working with elements on the page, especially as positioning and alignment become increasingly important.  Something that may not be immediately apparent, is that when we say, _"each element in the HTML document is represented by the box model,"_ this includes elements that contain other elements.  This outer element is often called a *wrapper*, and its *children*, the elements it contains, will appear in the _content area_ shown in _Figure 1._
+It is very helpful to keep this image in mind when working with elements on the page, especially as positioning and alignment become increasingly important.  Something that may not be immediately apparent is that when we say, _"each element in the HTML document is represented by the box model,"_ this includes elements that contain other elements.  This outer element is often called a *wrapper*, and its *children*, the elements it contains, will appear in the _content area_ shown in _Figure 1._
 
 Often we will use wrappers to help with positioning and grouping of its child elements on the page.  This allows us to have discrete sections.  Think header, footer, sidebar, etc.  Very often this *parent* (wrapper) element will be the `<div>`.
 
 NOTE: Before folks start lighting the torches, I should mention there are many more potential wrappers, especially for big site sections. https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning[HTML5 has specific wrappers for a lot of the site sections you may build out] like `<header>`, `<footer>`, `<nav>`, and even `<section>`.  I'm blatantly ignoring them for now, and only focusing on the more generic `<div>` to try and avoid information overload. Don't worry, HTML5 will be adressed once everyone has their legs, so to speak.
+
+A simple example may help clarify some this box model and wrapper business:
+
+_HTML:_
+
+```
+  <div class="call-to-action">
+    <h2>Step Right Up!</h2>
+    <p>Hot Chili here!</p>
+    <p>Come get your piping hot <strong>Texas Style</strong> Chili!</p>
+    <a href="https://www.youtube.com/watch?v=eM1pnZ5omyw" class="button" target="_blank">BWAH?!</a>
+  </div>
+```
+_CSS:_
+
+```
+.call-to-action {
+  width: 250px;
+  margin: 50px auto 0;
+  border: 10px solid #CCCCCC;
+  background-color: #EFEFEF;
+  padding: 25px;
+}
+
+.call-to-action h2 {
+  margin-top: 0;
+}
+
+a.button {
+  background: #AAFFAA;
+  border: 2px solid #00AA00;
+  color: #005500;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7px;
+  display: inline-block;
+}
+```
+This renders to https://rh0.github.io/lessons/box-model/ex-1/[something like this].
+
+This is a good time to mention a very special tool that's just sitting in your browser. If you have not discovered this yet, you should know about the developer tools. When you are viewing the https://rh0.github.io/lessons/box-model/ex-1/[rendered output of the above example] in your browser, right click on an area of interest (try the larger grey box) and select _inspect element_. A Window pane will appear at the bottom of the browser.  This is FULL of useful information!  On the left you can see the HTML, and on the right the correspending CSS. Hover over the HTML elements on the right, and you can see a visual representation of the properties of the element (margins, padding, etc).  Click on an HTML element on the left, and the corresponding CSS will be displayed on the right.  You can even edit the CSS here and see how it changes how the document renders.  This works very well in Firefox and Chrome, and I have it open constantly when I am doing front-end work. *I cannot stress enough how valuable this tool is, and I highly suggest you use it as we progress.* Many of the examples going forward I will simply link to, and leave the inspection of it as an exersise for the reader. Further, you can find all of the code for the live examples I am linking to https://github.com/rh0/lessons[in this repository].
+
+So back to the above example.  The `a` element with the class _button_ is very simple example of working with the box model properties. No width and height are defined, so default to `auto`. This means the box will expand or contract to fit the stuff in the content area.  A Background and a border is given, with some colors.  Notice how the background also fills the padding area? Also note the https://developer.mozilla.org/en-US/docs/Web/CSS/border#Syntax[shorthand for the border definition].  There is also a curious `display: inline-block`, we'll ignore that for just a second.  Our little `a.button` is wrapped by a `div` with the class _call-to-action_.  So `a.button` is a child element of `div.call-to-action`. Notice how we have added some of our own box model properties to _call-to-action_, and the child elements all appear in the content section of is box-model. Note the https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Syntax[shorthand for margins here], https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax[padding is similar].
+
+Take some time and really study this. Replicate the code on your local, and mess around with it. What happens if you add more content to the _call-to-action_ wrapper? What happens when the content in the `a` tag is longer.  Play with the CSS and see what variations you can come up with, and how things change. 
+
+== Floating
+
+We've been talking about the box model to build to the idea of positioning.   We work with the box model properties to aid us in positioning elements in the browser. Up to this point we have been dealing with what is called *normal flow*. Elements are laid out vertically in the same order they are in the HTML document.  Sometimes this is all you need, and can work out somewhat nicely (as seen in the previous example.)  However this can be pretty limiting, and we will often want more control of how things are positioned when rendered. There are a couple of scemes available to us to accomplish this, but for now we will focus on the *float positioning sceme*.
+
+Consider our above example.  Looks pretty good right?  Nice little element centered on the page and what not. But say we want 3 call to action blocks all side by side. What to do? Well first we should add a couple more _call-to-action_ blocks to our HTML. Something like:
+
+```
+<div class="call-to-action">
+  <h2>HEYEAYEA!</h2>
+  <p>"And he tries!"</p>
+  <p>"<strong>Oh my god do I try!</strong> I try all the time... In this institution."</p>
+  <a href="https://www.youtube.com/watch?v=eh7lp9umG2I" class="button" target="_blank">NYAH!</a>
+</div>
+ 
+<div class="call-to-action">
+  <h2>Is that a pop-tart?</h2>
+  <p>I hope no one has a heart attack.</p>
+  <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4" class="button" target="_blank">NYAN!</a>
+</div>
+```
+
+Now looking at the browser we see our 3 blocks centered, one after another, down the page.  If we adjust the CSS on the _call-to-action_ element to something like:
+
+```
+.call-to-action {
+  width: 250px;
+  margin: 50px 25px 0 0;
+  border: 10px solid #CCCCCC;
+  background-color: #EFEFEF;
+  padding: 25px;
+  float: left;
+}
+```
+We see something very different! The _call-to-action_ blocks line up horizontally.  Notice how the right margin of `25px` spaces them apart from one another. To get things to center up again, we will need to wrap all of our _call-to-action_ elements in a new `div` and perform our little margin trick. Play with these floating elements on your local for a while.  Change stuff up and see how it effects the float, if at all.  https://rh0.github.io/lessons/box-model/ex-2/[Here is a cleaned up version of floating three elements horizontally]. Be sure to check out https://github.com/rh0/lessons/blob/gh-pages/box-model/ex-2/style.css[the code] for this. There are a couple of "tricks" in there. Pay close attention to widths of wrappers containing floating elements, otherwise you risk elements wrapping (popping down to the next line.)
+
+Floating elements can also be used in conjunction with non-floated elements.  This is ofent used where we want normal flow content to *wrap* around an element.  https://rh0.github.io/lessons/box-model/ex-3/[Inspect this simple example to see this in action.] The elements in the _fill-murray_ element are the only thing floated here, again note the margins used for spacing.
+
+== The Challenge
