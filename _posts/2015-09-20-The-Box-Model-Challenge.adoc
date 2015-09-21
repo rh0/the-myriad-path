@@ -126,7 +126,7 @@ The objective of this challenge is to recreate _Figure 2._ in your newly created
 .The Challenge
 image::https://i.imgur.com/GFD1k1o.png[Box Model Challenge, link="https://i.imgur.com/GFD1k1o.png"]
 
-If you clicke the image it will link you to the full size.  A few details:
+If you click the image it will link you to the full size.  A few details:
 
 * The width of the centered content area is `1000px`
 * Remeber the auto margin trick
