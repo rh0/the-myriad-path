@@ -59,14 +59,14 @@ a.button {
   font-weight: bold;
   text-decoration: none;
   padding: 7px;
-  display: inline-block;
+  float: left;
 }
 ```
 This renders to https://rh0.github.io/lessons/box-model/ex-1/[something like this].
 
 This is a good time to mention a very special tool that's just sitting in your browser. If you have not discovered this yet, you should know about the developer tools. When you are viewing the https://rh0.github.io/lessons/box-model/ex-1/[rendered output of the above example] in your browser, right click on an area of interest (try the larger grey box) and select _inspect element_. A Window pane will appear at the bottom of the browser.  This is FULL of useful information!  On the left you can see the HTML, and on the right the correspending CSS. Hover over the HTML elements on the right, and you can see a visual representation of the properties of the element (margins, padding, etc).  Click on an HTML element on the left, and the corresponding CSS will be displayed on the right.  You can even edit the CSS here and see how it changes how the document renders.  This works very well in Firefox and Chrome, and I have it open constantly when I am doing front-end work. *I cannot stress enough how valuable this tool is, and I highly suggest you use it as we progress.* Many of the examples going forward I will simply link to, and leave the inspection of it as an exersise for the reader. Further, you can find all of the code for the live examples I am linking to https://github.com/rh0/lessons[in this repository].
 
-So back to the above example.  The `a` element with the class _button_ is very simple example of working with the box model properties. No width and height are defined, so default to `auto`. This means the box will expand or contract to fit the stuff in the content area.  A Background and a border is given, with some colors.  Notice how the background also fills the padding area? Also note the https://developer.mozilla.org/en-US/docs/Web/CSS/border#Syntax[shorthand for the border definition].  There is also a curious `display: inline-block`, we'll ignore that for just a second.  Our little `a.button` is wrapped by a `div` with the class _call-to-action_.  So `a.button` is a child element of `div.call-to-action`. Notice how we have added some of our own box model properties to _call-to-action_, and the child elements all appear in the content section of is box-model. Note the https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Syntax[shorthand for margins here], https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax[padding is similar].
+So back to the above example.  The `a` element with the class _button_ is very simple example of working with the box model properties. No width and height are defined, so default to `auto`. This means the box will expand or contract to fit the stuff in the content area.  A Background and a border is given, with some colors.  Notice how the background also fills the padding area? Also note the https://developer.mozilla.org/en-US/docs/Web/CSS/border#Syntax[shorthand for the border definition].  There is also a curious `float: left`, we'll ignore that for just a second.  Our little `a.button` is wrapped by a `div` with the class _call-to-action_.  So `a.button` is a child element of `div.call-to-action`. Notice how we have added some of our own box model properties to _call-to-action_, and the child elements all appear in the content section of is box-model. Note the https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Syntax[shorthand for margins here], https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax[padding is similar].
 
 Take some time and really study this. Replicate the code on your local, and mess around with it. What happens if you add more content to the _call-to-action_ wrapper? What happens when the content in the `a` tag is longer.  Play with the CSS and see what variations you can come up with, and how things change. 
 
@@ -108,3 +108,35 @@ We see something very different! The _call-to-action_ blocks line up horizontall
 Floating elements can also be used in conjunction with non-floated elements.  This is ofent used where we want normal flow content to *wrap* around an element.  https://rh0.github.io/lessons/box-model/ex-3/[Inspect this simple example to see this in action.] The elements in the _fill-murray_ element are the only thing floated here, again note the margins used for spacing.
 
 == The Challenge
+
+==== Some Housekeeping
+Before I lay down the details of this challenge, I think we should do a bit of housekeeping of the _basic-html_ repository you have been working with.  Rather than having to create a repository for every challenge, I think it may be best just to organize things in folders within a single repository. The struckture should be something like https://github.com/rh0/lessons[my examples repository].  Navigate to your repository folder in terminal. First create a folder to preserve the work you have done, call it whatever you would like. Move all of the files you have been working with (except for the README.md) into this newly created folder using the `mv` command. Now create a folder called _box-model-challenge_.  This is the folder you will use to contain the HTML and CSS for this challenge.  It will probably be helpful to have a root `index.html` file as well. Create it with your editor in the base repository directory (the same place as your readme), have it include a simple list of links to the folders you have just created.  See https://github.com/rh0/lessons/blob/gh-pages/index.html[the root file in my examples repository].  When you are all done and you perform and `ls` from your repository directory, you should see something like:
+```
+$> ls
+previous-work  box-model-challenge  index.html
+```
+If everything looks good do a `git add -A`, commit with a thoughtful message, then push up to `gh-pages`.
+
+=== Here We Go
+The objective of this challenge is to recreate _Figure 2._ in your newly created _box-model-challenge_ folder. Please use and external stylesheet, linked appropriately.
+
+[[img-boxModelChallenge]]
+.The Challenge
+image::https://i.imgur.com/GFD1k1o.png[Box Model Challenge, link="https://i.imgur.com/GFD1k1o.png"]
+
+If you clicke the image it will link you to the full size.  A few details:
+
+* The width of the centered content area is `1000px`
+* Remeber the auto margin trick
+* The header and footer background color is `#EEEEEE` (but you can make it whatever you would like)
+* The header and footer border size is `3px` and its color `#CCCCCC`
+* paragraph margins are left to browser default
+* margins are mostly `20px` with a couple of exceptions
+* borders around floating elements are `2px` and have a color of `#CCCCCC`
+* tip: add `overflow: auto` to elements that have floating children
+* The green "buttons" should be links (like in the above examples
+* you can use fill murray or a similar service for the image, or provide your own!
+
+Things don't have to match exactly, but try to get it close. I don't care as much about colors or content, so you can make that watever you would like.  I'm looking to see that you can implemente some floating elements, structure an HTML document reasonably, and write some fairly clean CSS.  Not to mention solving the puzzle of creating a layout to match this one.
+
+You may feel like you've been throwin in the deep end a bit. Thanks okay! Take your time.  If you feel stuck review what we have covered so far, do gome googling and find some supplemental material, and of course feel free to ask questions.  If find that everyone is struggling with this I will post some follow ups with more clarification.  Otherwise, good luck and have fun! 
