@@ -107,7 +107,7 @@ Now looking at the browser we see our 3 blocks centered, one after another, down
 ```
 We see something very different! The _call-to-action_ blocks line up horizontally.  Notice how the right margin of `25px` spaces them apart from one another. To get things to center up again, we will need to wrap all of our _call-to-action_ elements in a new `div` and perform our little margin trick. Play with these floating elements on your local for a while.  Change stuff up and see how it effects the float, if at all.  https://rh0.github.io/lessons/box-model/ex-2/[Here is a cleaned up version of floating three elements horizontally]. Be sure to check out https://github.com/rh0/lessons/blob/gh-pages/box-model/ex-2/style.css[the code] for this. There are a couple of "tricks" in there. Pay close attention to widths of wrappers containing floating elements, otherwise you risk elements wrapping (popping down to the next line.)
 
-Floating elements can also be used in conjunction with non-floated elements.  This is ofent used where we want normal flow content to *wrap* around an element.  https://rh0.github.io/lessons/box-model/ex-3/[Inspect this simple example to see this in action.] The elements in the _fill-murray_ element are the only thing floated here, again note the margins used for spacing.
+Floating elements can also be used in conjunction with non-floated elements.  This is often used where we want normal flow content to *wrap* around an element.  https://rh0.github.io/lessons/box-model/ex-3/[Inspect this simple example to see this in action.] The elements in the _fill-murray_ element are the only thing floated here, again note the margins used for spacing.
 
 == The Challenge
 
