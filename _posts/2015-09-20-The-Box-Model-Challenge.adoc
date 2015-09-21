@@ -130,6 +130,7 @@ If you clicke the image it will link you to the full size.  A few details:
 
 * The width of the centered content area is `1000px`
 * Remeber the auto margin trick
+* Remeber that the browser will add defaul styles (mostly margins) to certain elements including `<body>` 
 * The header and footer background color is `#EEEEEE` (but you can make it whatever you would like)
 * The header and footer border size is `3px` and its color `#CCCCCC`
 * paragraph margins are left to browser default
