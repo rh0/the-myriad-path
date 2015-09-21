@@ -46,6 +46,7 @@ _CSS:_
   border: 10px solid #CCCCCC;
   background-color: #EFEFEF;
   padding: 25px;
+  overflow: auto;
 }
 
 .call-to-action h2 {
@@ -100,6 +101,7 @@ Now looking at the browser we see our 3 blocks centered, one after another, down
   border: 10px solid #CCCCCC;
   background-color: #EFEFEF;
   padding: 25px;
+  overflow: auto;
   float: left;
 }
 ```
