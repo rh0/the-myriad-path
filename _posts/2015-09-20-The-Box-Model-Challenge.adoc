@@ -73,7 +73,7 @@ Take some time and really study this. Replicate the code on your local, and mess
 
 == Floating
 
-We've been talking about the box model to build to the idea of positioning.   We work with the box model properties to aid us in positioning elements in the browser. Up to this point we have been dealing with what is called *normal flow*. Elements are laid out vertically in the same order they are in the HTML document.  Sometimes this is all you need, and can work out somewhat nicely (as seen in the previous example.)  However this can be pretty limiting, and we will often want more control of how things are positioned when rendered. There are a couple of scemes available to us to accomplish this, but for now we will focus on the *float positioning sceme*.
+We've been talking about the box model to build to the idea of positioning. Up to this point we have been dealing with what is called *normal flow*. Elements are laid out vertically in the same order they are in the HTML document.  Sometimes this is all you need, and can work out somewhat nicely (as seen in the previous example.)  However this can be pretty limiting, and we will often want more control of how things are positioned when rendered. There are a couple of scemes available to us to accomplish this, but for now we will focus on the *float positioning sceme*.
 
 Consider our above example.  Looks pretty good right?  Nice little element centered on the page and what not. But say we want 3 call to action blocks all side by side. What to do? Well first we should add a couple more _call-to-action_ blocks to our HTML. Something like:
 
