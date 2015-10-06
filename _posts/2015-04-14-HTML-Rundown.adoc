@@ -89,4 +89,4 @@ Obviously, there is a fair amount of ground between our simple example, and the 
 
 Now go back to your editor and start filling in the `<body>` section a bit more. It can be anything! Explore the tags on the cheat sheet (you can ignore `<table>`, `<form>`, and `<framest>` for now).  You can use a text filler if you would like to beef up your paragraphs. http://www.lipsum.com/feed/html[Lorem Ipsum] text is common, just as a placeholder text.  Use several header tags, make some links. Generally just see what the tags do (and look like) with HTML. As you make changes to your file and want to see the results in the browser, simply save the changes in your editor then refresh the page in your browser. 
 
-This doesn't have to be long and certainly not fancy, but when you are done try and have something similar to https://rh0.github.io/lessons/1.0/[this].
+This doesn't have to be long and certainly not fancy, but when you are done try and have something similar to https://rh0.github.io/lessons/basic-html/[this].
